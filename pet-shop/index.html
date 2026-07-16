@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZooSvet — Demo dizajn | rondo.rs</title>
+  <meta name="description" content="Demo sajt za prodavnicu kućnih ljubimaca. Hrana, oprema, igračke, akcije i dve prodajne lokacije u Beogradu.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    /* Pet-shop specific: colorful category grid */
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .cat-card {
+      border-radius: 16px;
+      padding: 1.75rem 1.25rem;
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      border: 1px solid transparent;
+      transition: transform 0.25s, box-shadow 0.25s;
+      cursor: pointer;
+    }
+    .cat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px -8px rgba(217,70,239,0.35);
+    }
+    .cat-card:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+    }
+    .cat-card .cat-ico { font-size: 2.6rem; line-height: 1; }
+    .cat-card h3 { font-size: 0.95rem; font-weight: 700; color: #f1f5f9; margin: 0; }
+    .cat-card p { font-size: 0.78rem; color: var(--text-muted); margin: 0; }
+
+    /* Brand chips */
+    .brands-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+    }
+    .brand-chip {
+      padding: 0.55rem 1.25rem;
+      border-radius: 999px;
+      background: rgba(217,70,239,0.08);
+      border: 1px solid rgba(217,70,239,0.25);
+      color: #f1f5f9;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .brand-chip:hover {
+      background: rgba(217,70,239,0.18);
+      border-color: rgba(217,70,239,0.5);
+    }
+
+    /* Akcija cards */
+    .akcija-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .akcija-card {
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.5rem;
+      color: #fff;
+    }
+    .akcija-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, transparent 30%, rgba(0,0,0,0.7));
+    }
+    .akcija-card > * { position: relative; z-index: 1; }
+    .akcija-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 0.5rem;
+    }
+    .akcija-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.25rem; }
+    .akcija-card p { font-size: 0.85rem; opacity: 0.85; margin: 0; }
+
+    /* Store cards */
+    .stores-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .store-card {
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .store-card-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+    .store-card-body {
+      padding: 1.25rem 1.5rem 1.5rem;
+    }
+    .store-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+    .store-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .store-meta span { display: flex; align-items: center; gap: 0.5rem; }
+    .store-meta svg { width: 15px; height: 15px; flex-shrink: 0; color: var(--accent); }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" role="banner">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">Zoo<span>Svet</span></a>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="#kategorije">Kategorije</a></li>
+      <li><a href="#akcije">Akcije</a></li>
+      <li><a href="#brendovi">Brendovi</a></li>
+      <li><a href="#prodavnice">Prodavnice</a></li>
+      <li><a href="#kontakt" class="nav-cta">Kontakt</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Otvori meni" aria-expanded="false" aria-controls="nav-links">
+      <span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO: centered energetic -->
+<section class="hero-centered" aria-label="Naslovna">
+  <div class="hero-centered-content">
+    <span class="section-label">🐾 Sve za vašeg ljubimca</span>
+    <h1>Hrana, igračke<br>i sve što ih čini srećnim</h1>
+    <p class="lead">Najveći izbor hrane, opreme i igračaka za pse, mačke, ptice, ribice i glodare. Dostava na kućnu adresu — besplatno za narudžbine iznad 3.000 RSD.</p>
+    <div class="hero-btns">
+      <a href="#kategorije" class="btn btn-white btn-lg">Istražite ponudu</a>
+      <a href="#akcije" class="btn btn-ghost btn-lg">Pogledaj akcije 🎉</a>
+    </div>
+    <div class="hero-badges">
+      <div class="hero-badge"><strong>5.000+</strong><span>artikala na lageru</span></div>
+      <div class="hero-badge"><strong>2</strong><span>prodajne lokacije</span></div>
+      <div class="hero-badge"><strong>Pon–Sub</strong><span>09:00–20:00</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- KATEGORIJE PROIZVODA -->
+<section class="section" id="kategorije" aria-labelledby="kat-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="section-label">Asortiman</span>
+      <h2 id="kat-h2">Kategorije proizvoda</h2>
+      <p>Sve što vaš ljubimac treba — na jednom mestu, uz stručan savet.</p>
+    </div>
+    <div class="cat-grid">
+      <a href="#kontakt" class="cat-card reveal" style="background:rgba(217,70,239,0.1);border-color:rgba(217,70,239,0.2);">
+        <span class="cat-ico">🐶</span>
+        <h3>Hrana za pse</h3>
+        <p>Suva, mokra i dijetetska hrana za sve pasmine i uzraste</p>
+      </a>
+      <a href="#kontakt" class="cat-card reveal" style="background:rgba(236,72,153,0.1);border-color:rgba(236,72,153,0.2);">
+        <span class="cat-ico">🐱</span>
+        <h3>Hrana za mačke</h3>
+        <p>Premium, grain-free i medicinska hrana za mačke svake dobi</p>
+      </a>
+      <a href="#kontakt" class="cat-card reveal" style="background:rgba(168,85,247,0.1);border-color:rgba(168,85,247,0.2);">
+        <span class="cat-ico">🛏️</span>
+        <h3>Oprema i ležišta</h3>
+        <p>Kavezi, košarice, nosači i udobna ležišta svih veličina</p>
+      </a>
+      <a href="#kontakt" class="cat-card reveal" style="background:rgba(245,158,11,0.1);border-color:rgba(245,158,11,0.2);">
+        <span class="cat-ico">🎾</span>
+        <h3>Igračke</h3>
+        <p>Interaktivne, plišane i edukativne igračke za sve vrste ljubimaca</p>
+      </a>
+      <a href="#kontakt" class="cat-card reveal" style="background:rgba(16,185,129,0.1);border-color:rgba(16,185,129,0.2);">
+        <span class="cat-ico">✨</span>
+        <h3>Nega i kozmetika</h3>
+        <p>Šamponi, četke, škare, parfemi i preparati za njegu dlake</p>
+      </a>
+      <a href="#kontakt" class="cat-card reveal" style="background:rgba(59,130,246,0.1);border-color:rgba(59,130,246,0.2);">
+        <span class="cat-ico">🐠</span>
+        <h3>Akvaristika</h3>
+        <p>Akvarijumi, pumpe, filtri, hrana za ribe i ukrasne biljke</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- AKCIJE -->
+<section class="section section--alt" id="akcije" aria-labelledby="akcije-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="section-label">Posebne ponude</span>
+      <h2 id="akcije-h2">Akcije ove nedelje</h2>
+      <p>Redovno osvežavamo ponudu — ne propustite popuste.</p>
+    </div>
+    <div class="akcija-grid">
+      <div class="akcija-card reveal" style="background: linear-gradient(135deg, #7e22ce, #d946ef); background-image: linear-gradient(135deg, #7e22ce 0%, #d946ef 100%);">
+        <span class="akcija-badge">–30%</span>
+        <h3>Royal Canin hrana za pse</h3>
+        <p>Svi paketi od 4 kg i više. Akcija traje do 31.07.</p>
+      </div>
+      <div class="akcija-card reveal" style="background: linear-gradient(135deg, #0e7490, #06b6d4);">
+        <span class="akcija-badge">2+1 gratis</span>
+        <h3>Vlažna hrana za mačke</h3>
+        <p>Whiskas i Felix — svaka treća konzerva na poklon.</p>
+      </div>
+      <div class="akcija-card reveal" style="background: linear-gradient(135deg, #b45309, #f59e0b);">
+        <span class="akcija-badge">Novo</span>
+        <h3>Premium igračke za pse</h3>
+        <p>Kong, Trixie i Zippy Paws — nova kolekcija stigla!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRENDOVI -->
+<section class="section" id="brendovi" aria-labelledby="brendovi-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="section-label">Naši brendovi</span>
+      <h2 id="brendovi-h2">Provereni brendovi u ponudi</h2>
+      <p>Sarađujemo isključivo sa pouzdanim i sertifikovanim proizvođačima hrane i opreme.</p>
+    </div>
+    <div class="brands-row reveal">
+      <span class="brand-chip">Royal Canin</span>
+      <span class="brand-chip">Hill's Science Diet</span>
+      <span class="brand-chip">Purina Pro Plan</span>
+      <span class="brand-chip">Orijen</span>
+      <span class="brand-chip">Acana</span>
+      <span class="brand-chip">Whiskas</span>
+      <span class="brand-chip">Felix</span>
+      <span class="brand-chip">Kong</span>
+      <span class="brand-chip">Trixie</span>
+      <span class="brand-chip">Ferplast</span>
+      <span class="brand-chip">Tetra</span>
+      <span class="brand-chip">JBL</span>
+    </div>
+  </div>
+</section>
+
+<!-- PRODAVNICE -->
+<section class="section section--alt" id="prodavnice" aria-labelledby="prod-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="section-label">Gde smo</span>
+      <h2 id="prod-h2">Naše prodavnice</h2>
+      <p>Posetite nas lično ili naručite online sa dostavom na kućnu adresu.</p>
+    </div>
+    <div class="stores-grid">
+      <div class="store-card reveal">
+        <!-- zameni pravom fotografijom prodavnice -->
+        <img src="https://picsum.photos/seed/petshop1/800/400" alt="ZooSvet Novi Beograd" loading="lazy" class="store-card-img">
+        <div class="store-card-body">
+          <h3>ZooSvet — Novi Beograd</h3>
+          <div class="store-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Bulevar Mihajla Pupina 10v, Novi Beograd</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Pon–Sub 09:00–20:00</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>+381 11 XXX XX XX</span>
+          </div>
+          <a href="#kontakt" class="btn btn-primary">Pozovi prodavnicu</a>
+        </div>
+      </div>
+      <div class="store-card reveal">
+        <!-- zameni pravom fotografijom prodavnice -->
+        <img src="https://picsum.photos/seed/petshop2/800/400" alt="ZooSvet Zemun" loading="lazy" class="store-card-img">
+        <div class="store-card-body">
+          <h3>ZooSvet — Zemun</h3>
+          <div class="store-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Glavna ulica 5, Zemun</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Pon–Sub 09:00–20:00 · Ned 10:00–15:00</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>+381 11 XXX XX XX</span>
+          </div>
+          <a href="#kontakt" class="btn btn-primary">Pozovi prodavnicu</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" aria-labelledby="cta-h2">
+  <div class="cta-section-inner">
+    <h2 id="cta-h2">Naručite online —<br>dostava za 24 sata</h2>
+    <p>Besplatna dostava za narudžbine iznad 3.000 RSD. Pišite nam za savet oko odabira hrane ili opreme.</p>
+    <div class="hero-btns">
+      <a href="tel:+38163XXXXXXX" class="btn btn-white btn-lg">Pozovite nas</a>
+      <a href="viber://chat?number=%2B38163XXXXXXX" class="btn btn-ghost btn-lg">Viber narudžbina</a>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="section section--alt" id="kontakt" aria-labelledby="kontakt-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <h2 id="kontakt-h2">Kontaktirajte nas</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 010 2.19 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div class="contact-item-text">
+            <strong>Telefon / Viber</strong>
+            <a href="tel:+38163XXXXXXX">+381 63 XXX XX XX</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+          <div class="contact-item-text">
+            <strong>Imejl</strong>
+            <a href="mailto:info@zoosvet.rs">info@zoosvet.rs</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+          <div class="contact-item-text">
+            <strong>Radno vreme</strong>
+            <span>Pon–Sub 09:00–20:00</span>
+          </div>
+        </div>
+        <div class="contact-btns">
+          <a href="tel:+38163XXXXXXX" class="btn btn-primary">Pozovi</a>
+          <a href="viber://chat?number=%2B38163XXXXXXX" class="btn btn-viber">Viber</a>
+          <a href="mailto:info@zoosvet.rs" class="btn btn-outline">Imejl</a>
+        </div>
+      </div>
+      <!-- zameni pravom Google Maps embed-om -->
+      <div class="map-placeholder reveal" role="img" aria-label="Mapa lokacije">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <span>Mapa lokacije<br><small>zameni Google Maps embed-om</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="footer-logo">Zoo<span>Svet</span></a>
+        <p>Sve za vašeg ljubimca — hrana, oprema i igračke vrhunskih brendova. Srećan ljubimac, srećan vlasnik.</p>
+      </div>
+      <nav aria-label="Footer kategorije">
+        <h4>Kategorije</h4>
+        <ul>
+          <li><a href="#kategorije">Hrana za pse</a></li>
+          <li><a href="#kategorije">Hrana za mačke</a></li>
+          <li><a href="#kategorije">Igračke</a></li>
+          <li><a href="#kategorije">Akvaristika</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Footer info">
+        <h4>Informacije</h4>
+        <ul>
+          <li><a href="#akcije">Akcije</a></li>
+          <li><a href="#brendovi">Brendovi</a></li>
+          <li><a href="#prodavnice">Prodavnice</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 ZooSvet · Beograd, Zemun</span>
+      <a href="https://rondo.rs/sr/usluge/novo" target="_blank" rel="noopener">Sajt izradio rondo.rs</a>
+    </div>
+  </div>
+</footer>
+
+<!-- DEMO BAR -->
+<div class="demo-bar" role="complementary" aria-label="Demo informacija">
+  <a href="https://rondo.rs/sr/usluge/novo" target="_blank" rel="noopener">
+    Demo dizajn — vaš sajt za <span class="demo-bar-hi">200€</span> · rondo.rs
+  </a>
+</div>
+
+<script src="../assets/base.js" defer></script>
+</body>
+</html>

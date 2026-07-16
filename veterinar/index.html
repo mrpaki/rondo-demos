@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vet Klinika Šapa — Demo dizajn | rondo.rs</title>
+  <meta name="description" content="Demo sajt za veterinarsku ambulantu. Preventivni pregledi, vakcinacija, hirurgija i hitna veterinarska pomoć.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" role="banner">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">Vet Klinika<span>Šapa</span></a>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="#usluge">Usluge</a></li>
+      <li><a href="#radno-vreme">Radno vreme</a></li>
+      <li><a href="#tim">Tim</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+      <li><a href="#zakazivanje" class="nav-cta">Zakaži pregled</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Otvori meni" aria-expanded="false" aria-controls="nav-links">
+      <span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO: photo -->
+<section class="hero-photo" aria-label="Naslovna">
+  <!-- zameni pravom fotografijom -->
+  <div class="hero-photo-bg" style="background-image: url('https://picsum.photos/seed/vet-hero/1600/900')" role="img" aria-label="Veterinarska ordinacija sa srećnim ljubimcem"></div>
+  <div class="hero-photo-overlay" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero-photo-content">
+      <span class="section-label" style="background:rgba(255,255,255,0.2);color:#fff;">Veterinarska ambulanta · Beograd</span>
+      <h1>Svaka šapa zaslužuje<br>stručnu pažnju</h1>
+      <p class="lead">Kompletan veterinarski pregled, vakcinacija i hirurgija — sa brižnim pristupom i iskusnim timom. Zakazivanje u roku od 24 sata.</p>
+      <div class="hero-btns">
+        <a href="#zakazivanje" class="btn btn-primary btn-lg">Zakaži pregled</a>
+        <a href="#usluge" class="btn btn-ghost btn-lg">Naše usluge</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USLUGE -->
+<section class="section" id="usluge" aria-labelledby="usluge-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="section-label">Šta nudimo</span>
+      <h2 id="usluge-h2">Veterinarske usluge</h2>
+      <p>Kompletna nega vašeg ljubimca od preventive do specijalizovane medicine.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <h3>Preventivni pregledi</h3>
+        <p>Redovni zdravstveni pregled, procena telesne mase, zubalo i opšte stanje vašeg ljubimca.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+        </div>
+        <h3>Vakcinacija</h3>
+        <p>Kompletan program vakcinacije za pse, mačke i egzotične životinje. Podsetnik za narednu dozu.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+        </div>
+        <h3>Hirurgija</h3>
+        <p>Kastacija, sterilizacija i meke tkivne operacije u modernoj operacionoj sali sa anestezijom.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3>Stomatologija</h3>
+        <p>Ultrazvučno čišćenje zubnog kamenca, ekstrakcija i obrada zuba kod pasa i mačaka.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+        </div>
+        <h3>Dermatologija</h3>
+        <p>Dijagnoza i lečenje kožnih oboljenja, alergija i parazitoza. Analiza dlake i kože.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h3>Hitna pomoć</h3>
+        <p>Dežurna veterinarska služba radnim danima do 22:00 h. Brza intervencija kod povreda i trovanja.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RADNO VREME / HITNO -->
+<section class="section section--dark" id="radno-vreme" aria-labelledby="radnovreme-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="section-label">Dostupnost</span>
+      <h2 id="radnovreme-h2">Radno vreme i hitna pomoć</h2>
+      <p>Ovde smo kada vaš ljubimac treba pomoć — i u hitnim situacijama.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;align-items:start;">
+      <!-- Radno vreme -->
+      <div class="reveal">
+        <h3 style="font-size:1.1rem;margin-bottom:1rem;color:var(--accent);">Redovno radno vreme</h3>
+        <table class="schedule-table">
+          <tbody>
+            <tr><td>Ponedeljak</td><td>08:00 – 20:00</td></tr>
+            <tr><td>Utorak</td><td>08:00 – 20:00</td></tr>
+            <tr><td>Sreda</td><td>08:00 – 20:00</td></tr>
+            <tr><td>Četvrtak</td><td>08:00 – 20:00</td></tr>
+            <tr><td>Petak</td><td>08:00 – 18:00</td></tr>
+            <tr><td>Subota</td><td>09:00 – 14:00</td></tr>
+            <tr class="closed"><td>Nedelja</td><td>Zatvoreno</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Hitno -->
+      <div class="reveal">
+        <h3 style="font-size:1.1rem;margin-bottom:1rem;color:var(--accent);">Hitna veterinarska pomoć</h3>
+        <div style="background:rgba(22,163,74,0.12);border:1px solid rgba(22,163,74,0.35);border-radius:12px;padding:1.5rem;">
+          <div style="font-size:2rem;margin-bottom:0.75rem;">🚨</div>
+          <p style="margin-bottom:1rem;line-height:1.6;">Ako je vaš ljubimac u opasnosti, pozovite nas odmah. Dežurni veterinar je dostupan <strong>pon–pet do 22:00 h</strong>.</p>
+          <a href="tel:+38163XXXXXXX" class="btn btn-primary" style="width:100%;justify-content:center;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 0111.19 19 19.5 19.5 0 013.07 10.8 19.79 19.79 0 010 2.19 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            Pozovi hitnu: +381 63 XXX XX XX
+          </a>
+        </div>
+        <div style="margin-top:1.25rem;padding:1.25rem;background:rgba(255,255,255,0.04);border-radius:12px;border:1px solid rgba(255,255,255,0.08);">
+          <p style="font-size:0.9rem;color:var(--text-muted);">Za ostale upite i zakazivanje redovnih pregleda koristite obrazac ili nas kontaktirajte na Viber.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIM -->
+<section class="section" id="tim" aria-labelledby="tim-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="section-label">Naš tim</span>
+      <h2 id="tim-h2">Stručnjaci koji vole životinje</h2>
+      <p>Iskusni veterinari i tehničari posvećeni zdravlju i dobrobiti vašeg ljubimca.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <!-- zameni pravom fotografijom -->
+        <div class="team-avatar"><img src="https://picsum.photos/seed/vet-team1/240/240" alt="Dr. Milica Jovanović" loading="lazy"></div>
+        <h3>Dr. Milica Jovanović</h3>
+        <span class="team-role">Spec. veterinarske hirurgije</span>
+        <p>Petnaest godina iskustva u maloj životinjskoj hirurgiji i internoj medicini pasa i mačaka.</p>
+      </div>
+      <div class="team-card reveal">
+        <!-- zameni pravom fotografijom -->
+        <div class="team-avatar"><img src="https://picsum.photos/seed/vet-team2/240/240" alt="Dr. Nikola Marković" loading="lazy"></div>
+        <h3>Dr. Nikola Marković</h3>
+        <span class="team-role">Veterinar — interna medicina</span>
+        <p>Specijalista za dijagnostiku internih bolesti, dermatologiju i nutricionizam kućnih ljubimaca.</p>
+      </div>
+      <div class="team-card reveal">
+        <!-- zameni pravom fotografijom -->
+        <div class="team-avatar"><img src="https://picsum.photos/seed/vet-team3/240/240" alt="Ana Savić" loading="lazy"></div>
+        <h3>Ana Savić</h3>
+        <span class="team-role">Veterinarski tehničar</span>
+        <p>Stručna tehničarka sa iskustvom u anesteziji, laboratorijskoj dijagnostici i nezi pacijenata.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ZAKAZIVANJE CTA -->
+<section class="cta-section" id="zakazivanje" aria-labelledby="cta-h2">
+  <div class="cta-section-inner">
+    <span class="section-label" style="background:rgba(255,255,255,0.2);color:#fff;">Zakaži odmah</span>
+    <h2 id="cta-h2">Vaš ljubimac zaslužuje<br>najboljeg veterinara</h2>
+    <p>Dostupni smo ponedeljkom do petka 08:00–20:00 i subotom 09:00–14:00.<br>Zakazivanje telefonom, Viber-om ili popuni kontakt obrazac.</p>
+    <div class="hero-btns">
+      <a href="tel:+38163XXXXXXX" class="btn btn-white btn-lg">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.0 2.19 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Pozovi nas
+      </a>
+      <a href="viber://chat?number=%2B38163XXXXXXX" class="btn btn-ghost btn-lg">Viber poruka</a>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="section section--alt" id="kontakt" aria-labelledby="kontakt-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <h2 id="kontakt-h2">Pronađite nas</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+          <div class="contact-item-text">
+            <strong>Adresa</strong>
+            <span>Bulevar Ljubimaca 22, Beograd</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 010 2.19 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div class="contact-item-text">
+            <strong>Telefon / Viber</strong>
+            <a href="tel:+38163XXXXXXX">+381 63 XXX XX XX</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+          <div class="contact-item-text">
+            <strong>Imejl</strong>
+            <a href="mailto:info@vetkliniksapa.rs">info@vetkliniksapa.rs</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+          <div class="contact-item-text">
+            <strong>Radno vreme</strong>
+            <span>Pon–Pet 08:00–20:00 · Sub 09:00–14:00</span>
+          </div>
+        </div>
+        <div class="contact-btns">
+          <a href="tel:+38163XXXXXXX" class="btn btn-primary">Pozovi</a>
+          <a href="viber://chat?number=%2B38163XXXXXXX" class="btn btn-viber">Viber</a>
+          <a href="mailto:info@vetkliniksapa.rs" class="btn btn-outline">Imejl</a>
+        </div>
+      </div>
+      <!-- zameni pravom Google Maps embed-om -->
+      <div class="map-placeholder reveal" role="img" aria-label="Mapa lokacije">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <span>Mapa lokacije<br><small>zameni Google Maps embed-om</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="footer-logo">Vet Klinika<span>Šapa</span></a>
+        <p>Brižna veterinarska nega sa stručnošću i srcem. Vaš ljubimac je u dobrim rukama.</p>
+      </div>
+      <nav aria-label="Footer usluge">
+        <h4>Usluge</h4>
+        <ul>
+          <li><a href="#usluge">Preventivni pregledi</a></li>
+          <li><a href="#usluge">Vakcinacija</a></li>
+          <li><a href="#usluge">Hirurgija</a></li>
+          <li><a href="#usluge">Hitna pomoć</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Footer info">
+        <h4>Informacije</h4>
+        <ul>
+          <li><a href="#radno-vreme">Radno vreme</a></li>
+          <li><a href="#tim">Naš tim</a></li>
+          <li><a href="#zakazivanje">Zakazivanje</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Vet Klinika Šapa · Bulevar Ljubimaca 22, Beograd</span>
+      <a href="https://rondo.rs/sr/usluge/novo" target="_blank" rel="noopener">Sajt izradio rondo.rs</a>
+    </div>
+  </div>
+</footer>
+
+<!-- DEMO BAR -->
+<div class="demo-bar" role="complementary" aria-label="Demo informacija">
+  <a href="https://rondo.rs/sr/usluge/novo" target="_blank" rel="noopener">
+    Demo dizajn — vaš sajt za <span class="demo-bar-hi">200€</span> · rondo.rs
+  </a>
+</div>
+
+<script src="../assets/base.js" defer></script>
+</body>
+</html>
