@@ -1,0 +1,15 @@
+/* RESTORAN — accent: terakota #c2410c, hero: photo warm */
+:root {
+  --accent: #c2410c;
+  --accent-darker: #9a3412;
+}
+
+/* Warmer photo overlay for food feel */
+.hero-photo-overlay {
+  background: linear-gradient(
+    to right,
+    rgba(30,10,0,0.78) 0%,
+    rgba(50,20,0,0.35) 60%,
+    rgba(30,10,0,0.1) 100%
+  );
+}

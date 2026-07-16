@@ -1,0 +1,18 @@
+/* GRADJEVINA — accent: yellow #eab308, hero: gradient bold */
+:root {
+  --accent: #eab308;
+  --accent-darker: #ca8a04;
+}
+
+/* Strong dark hero for construction feel */
+.hero-gradient {
+  background: linear-gradient(135deg, #0f172a 0%, #1c1c1c 100%);
+}
+.hero-gradient-content h1 { color: #f1f5f9; }
+.hero-gradient-content p  { color: #94a3b8; }
+.hero-gradient::after {
+  background: radial-gradient(circle, rgba(234,179,8,0.2) 0%, transparent 70%);
+}
+
+/* Yellow accent on cards looks better with dark border */
+.service-card:hover { border-color: #eab308; }

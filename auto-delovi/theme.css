@@ -1,0 +1,14 @@
+/* AUTO-DELOVI — accent: amber #f59e0b, hero: dark split */
+:root {
+  --accent: #f59e0b;
+  --accent-darker: #d97706;
+}
+
+/* Dark nav for this industry */
+.nav {
+  background: rgba(15,23,42,0.96);
+  border-bottom-color: #334155;
+}
+.nav-logo { color: #f1f5f9; }
+.nav-links a { color: #94a3b8; }
+.nav-toggle { color: #f1f5f9; }

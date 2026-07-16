@@ -1,0 +1,9 @@
+/* NEKRETNINE — accent: emerald #059669, hero: full-width search */
+:root {
+  --accent: #059669;
+  --accent-darker: #047857;
+}
+
+/* Premium spacing */
+.service-card { padding: 2.25rem; }
+.section-title { margin-bottom: 4rem; }

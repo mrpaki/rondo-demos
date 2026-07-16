@@ -1,0 +1,21 @@
+/* FITNES — accent: lime #84cc16, hero: gradient energetic */
+:root {
+  --accent: #84cc16;
+  --accent-darker: #65a30d;
+}
+
+/* High-energy diagonal gradient hero */
+.hero-gradient {
+  background: linear-gradient(125deg, #0f172a 0%, #14281a 50%, #1a3a0a 100%);
+  min-height: 90vh;
+}
+.hero-gradient::after {
+  background: radial-gradient(circle, rgba(132,204,22,0.22) 0%, transparent 65%);
+  right: -5%;
+  top: -30%;
+}
+.hero-gradient-content h1 { color: #f1f5f9; }
+.hero-gradient-content p  { color: #94a3b8; }
+
+/* Lime on dark works well */
+.section-label { background: #ecfccb; color: #4d7c0f; }

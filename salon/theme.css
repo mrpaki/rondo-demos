@@ -1,0 +1,15 @@
+/* SALON — accent: rose #e11d48, hero: split soft */
+:root {
+  --accent: #e11d48;
+  --accent-darker: #be123c;
+}
+
+/* Soft feminine hero visual panel */
+.hero-split-visual {
+  background: linear-gradient(135deg,
+    color-mix(in srgb, #e11d48 8%, white) 0%,
+    color-mix(in srgb, #e11d48 18%, white) 100%);
+}
+
+/* Rounded cards */
+.service-card { border-radius: 20px; }

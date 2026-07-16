@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Servis Speed — Demo dizajn | rondo.rs</title>
+  <meta name="description" content="Demo sajt za autoservis. Mehanička radionica, elektrika, gume, klima servis i tehnički pregled.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+<!-- NAV dark -->
+<header class="nav" role="banner">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo" style="color:#f1f5f9;">Auto<span>Speed</span></a>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="#usluge" style="color:#94a3b8;">Usluge</a></li>
+      <li><a href="#cenovnik" style="color:#94a3b8;">Cenovnik</a></li>
+      <li><a href="#kontakt" style="color:#94a3b8;">Kontakt</a></li>
+      <li><a href="#zakazivanje" class="nav-cta">Zakažite servis</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Otvori meni" aria-expanded="false" aria-controls="nav-links" style="color:#f1f5f9;">
+      <span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO: dark split mechanical -->
+<section class="hero-split hero-split-dark" aria-label="Naslovna">
+  <div class="hero-split-text">
+    <span class="section-label" style="background:rgba(220,38,38,0.2);color:#f87171;">Ovlašćeni autoservis</span>
+    <h1 style="color:#f1f5f9;">Brzo.<br>Precizno.<br><span style="color:#dc2626;">Pouzdano.</span></h1>
+    <p style="color:#94a3b8;font-size:1.1rem;">Kompletan servis vašeg vozila na jednom mestu. Iskusni mehaničari sa opremom za sve marke automobila.</p>
+    <div class="hero-btns" style="justify-content:flex-start;">
+      <a href="#zakazivanje" class="btn btn-primary btn-lg">Zakaži servis</a>
+      <a href="#usluge" class="btn" style="background:rgba(255,255,255,0.08);color:#e2e8f0;border-color:rgba(255,255,255,0.2);">Naše usluge</a>
+    </div>
+    <div style="display:flex;gap:2rem;margin-top:2.5rem;flex-wrap:wrap;">
+      <div><strong style="display:block;font-size:1.5rem;font-weight:900;color:#dc2626;">10+</strong><span style="font-size:0.85rem;color:#64748b;">godina iskustva</span></div>
+      <div><strong style="display:block;font-size:1.5rem;font-weight:900;color:#dc2626;">5.000+</strong><span style="font-size:0.85rem;color:#64748b;">servisiranih vozila</span></div>
+      <div><strong style="display:block;font-size:1.5rem;font-weight:900;color:#dc2626;">1–3</strong><span style="font-size:0.85rem;color:#64748b;">dana za većinu servisa</span></div>
+    </div>
+  </div>
+  <div class="hero-split-visual" style="background:#1a0a0a;min-height:85vh;">
+    <!-- Ilustracija mehaničarskog servisa -->
+    <svg viewBox="0 0 400 360" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- Auto stilizovan -->
+      <rect x="40" y="180" width="320" height="100" rx="20" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+      <!-- Karoserija -->
+      <path d="M80 180 L120 120 L280 120 L320 180" fill="#252f3f" stroke="#334155" stroke-width="2"/>
+      <!-- Prozori -->
+      <path d="M130 125 L150 155 L250 155 L270 125Z" fill="#0f172a" stroke="#dc2626" stroke-width="1.5" opacity="0.8"/>
+      <!-- Točkovi -->
+      <circle cx="110" cy="280" r="40" fill="#111" stroke="#334155" stroke-width="3"/>
+      <circle cx="110" cy="280" r="26" fill="#1e293b"/>
+      <circle cx="110" cy="280" r="14" fill="#dc2626" opacity="0.8"/>
+      <circle cx="290" cy="280" r="40" fill="#111" stroke="#334155" stroke-width="3"/>
+      <circle cx="290" cy="280" r="26" fill="#1e293b"/>
+      <circle cx="290" cy="280" r="14" fill="#dc2626" opacity="0.8"/>
+      <!-- Farovi -->
+      <rect x="40" y="195" width="25" height="16" rx="4" fill="#dc2626" opacity="0.9"/>
+      <rect x="335" y="195" width="25" height="16" rx="4" fill="#fca5a5" opacity="0.6"/>
+      <!-- Ključ -->
+      <g transform="translate(290, 60) rotate(-30)">
+        <rect x="-4" y="-60" width="8" height="80" rx="4" fill="#dc2626" opacity="0.9"/>
+        <circle cx="0" cy="-60" r="16" fill="none" stroke="#dc2626" stroke-width="5" opacity="0.9"/>
+        <rect x="-4" y="20" width="8" height="10" rx="2" fill="#dc2626" opacity="0.9"/>
+        <rect x="-4" y="34" width="8" height="6" rx="1" fill="#dc2626" opacity="0.9"/>
+      </g>
+      <!-- Lift -->
+      <rect x="20" y="320" width="360" height="8" rx="4" fill="#334155"/>
+      <rect x="50" y="240" width="12" height="80" fill="#475569"/>
+      <rect x="338" y="240" width="12" height="80" fill="#475569"/>
+    </svg>
+  </div>
+</section>
+
+<!-- USLUGE -->
+<section class="section section--alt" id="usluge" aria-labelledby="usluge-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="section-label">Šta servisiramo</span>
+      <h2 id="usluge-h2">Kompletne servisne usluge</h2>
+      <p>Sve što vaše vozilo treba — od redovnog servisa do složenih popravki.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
+        <h3>Mehanička radionica</h3>
+        <p>Servis motora, menjača, kvačila, kočnica i ovjesa. Dijagnostika computerom za sve marke.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <h3>Auto elektrika</h3>
+        <p>Dijagnostika elektronike, akumulatori, alternat ori, starter motori i svetlosna oprema.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="3"/><path d="M12 5v2M12 17v2M5 12H7M17 12h2"/></svg></div>
+        <h3>Gume i vulkanizer</h3>
+        <p>Montaža i balansiranje guma, popravka probušenih, sezonski prelaz i skladištenje guma.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+        <h3>Klima servis</h3>
+        <p>Punjenje klimatizacije rashladnim gasom, zamena filtera i dezinfekcija klima sistema.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+        <h3>Tehnički pregled</h3>
+        <p>Priprema vozila za tehnički pregled — provera svetala, kočnica, ispušnog sistema i dokumentacije.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg></div>
+        <h3>Redovni servis i ulje</h3>
+        <p>Zamena ulja, filtera i svećica prema planu proizvođača. Servisna knjižica na uvid.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CENOVNIK -->
+<section class="section" id="cenovnik" aria-labelledby="cena-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="section-label">Cenouvnik</span>
+      <h2 id="cena-h2">Okvirne cene usluga</h2>
+      <p>Finalna cena zavisi od marke, modela i stanja vozila. Besplatna procena pre radova.</p>
+    </div>
+    <div style="max-width:800px;margin:0 auto;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+        <div class="reveal">
+          <h3 class="menu-category-title">Redovni servis</h3>
+          <div class="menu-section">
+            <div class="menu-item"><div class="menu-item-name">Zamena ulja + filter</div><div class="menu-item-price">od 2.500 rsd</div></div>
+            <div class="menu-item"><div class="menu-item-name">Komplet filteri (4 kom)</div><div class="menu-item-price">od 4.500 rsd</div></div>
+            <div class="menu-item"><div class="menu-item-name">Zamena kočionih pločica</div><div class="menu-item-price">od 3.800 rsd</div></div>
+            <div class="menu-item"><div class="menu-item-name">Zamena kvačila</div><div class="menu-item-price">od 18.000 rsd</div></div>
+            <div class="menu-item"><div class="menu-item-name">Punjenje klime</div><div class="menu-item-price">od 3.500 rsd</div></div>
+          </div>
+        </div>
+        <div class="reveal">
+          <h3 class="menu-category-title">Gume i elektrika</h3>
+          <div class="menu-section">
+            <div class="menu-item"><div class="menu-item-name">Montaža + balansiranje (4 gume)</div><div class="menu-item-price">od 2.000 rsd</div></div>
+            <div class="menu-item"><div class="menu-item-name">Popravka probušene gume</div><div class="menu-item-price">od 500 rsd</div></div>
+            <div class="menu-item"><div class="menu-item-name">Zamena akumulatora</div><div class="menu-item-price">od 7.000 rsd</div></div>
+            <div class="menu-item"><div class="menu-item-name">Dijagnostika (čitanje greški)</div><div class="menu-item-price">1.500 rsd</div></div>
+            <div class="menu-item"><div class="menu-item-name">Priprema za tehnički</div><div class="menu-item-price">od 3.000 rsd</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ZAKAZIVANJE CTA -->
+<section class="cta-section" id="zakazivanje" aria-labelledby="zak-h2" style="background:linear-gradient(135deg,#7f1d1d,#dc2626);">
+  <div class="cta-section-inner">
+    <h2 id="zak-h2">Zakažite servis danas</h2>
+    <p>Pozovite nas ili pošaljite poruku — dogovaramo termin koji vam odgovara.<br>Besplatna dijagnostika pri prvoj poseti.</p>
+    <div class="hero-btns">
+      <a href="tel:+38163XXXXXXX" class="btn btn-white btn-lg">Pozovite: +381 63 XXX XX XX</a>
+      <a href="viber://chat?number=%2B38163XXXXXXX" class="btn btn-ghost btn-lg">Viber</a>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="section section--alt" id="kontakt" aria-labelledby="kontakt-h2">
+  <div class="container">
+    <div class="section-title reveal"><h2 id="kontakt-h2">Gde se nalazimo</h2></div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+          <div class="contact-item-text"><strong>Adresa</strong><span>Autoput 7, Beograd (kod pumpe)</span></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 0111.19 19 19.5 19.5 0 013.07 10.8 19.79 19.79 0 010 2.19 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div class="contact-item-text"><strong>Telefon / Viber</strong><a href="tel:+38163XXXXXXX">+381 63 XXX XX XX</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+          <div class="contact-item-text"><strong>Imejl</strong><a href="mailto:info@autospeed.rs">info@autospeed.rs</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+          <div class="contact-item-text"><strong>Radno vreme</strong><span>Pon–Pet 07:00–19:00 · Sub 08:00–15:00</span></div>
+        </div>
+        <div class="contact-btns">
+          <a href="tel:+38163XXXXXXX" class="btn btn-primary">Pozovi</a>
+          <a href="viber://chat?number=%2B38163XXXXXXX" class="btn btn-viber">Viber</a>
+          <a href="mailto:info@autospeed.rs" class="btn btn-outline">Imejl</a>
+        </div>
+      </div>
+      <!-- zameni pravom Google Maps embed-om -->
+      <div class="map-placeholder reveal" role="img" aria-label="Mapa lokacije servisa">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <span>Mapa lokacije<br><small>zameni Google Maps embed-om</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="footer-logo">Auto<span>Speed</span></a>
+        <p>Brzo, precizno, pouzdano. Vaš automobil u rukama iskusnih mehaničara koji znaju posao.</p>
+      </div>
+      <nav aria-label="Footer usluge">
+        <h4>Usluge</h4>
+        <ul>
+          <li><a href="#usluge">Mehanička radionica</a></li>
+          <li><a href="#usluge">Elektrika</a></li>
+          <li><a href="#usluge">Gume</a></li>
+          <li><a href="#usluge">Klima servis</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Footer info">
+        <h4>Servis</h4>
+        <ul>
+          <li><a href="#cenovnik">Cenovnik</a></li>
+          <li><a href="#zakazivanje">Zakazivanje</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Auto Servis Speed · Autoput 7, Beograd</span>
+      <a href="https://rondo.rs/sr/usluge/novo" target="_blank" rel="noopener">Sajt izradio rondo.rs</a>
+    </div>
+  </div>
+</footer>
+
+<div class="demo-bar" role="complementary" aria-label="Demo informacija">
+  <a href="https://rondo.rs/sr/usluge/novo" target="_blank" rel="noopener">
+    Demo dizajn — vaš sajt za <span class="demo-bar-hi">200€</span> · rondo.rs
+  </a>
+</div>
+
+<script src="../assets/base.js" defer></script>
+</body>
+</html>

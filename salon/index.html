@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Bella — Demo dizajn | rondo.rs</title>
+  <meta name="description" content="Demo sajt za frizerski salon i beauty studio. Frizure, manikir, pedikir i tretmani lica.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" role="banner">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">Studio<span>Bella</span></a>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="#usluge">Usluge</a></li>
+      <li><a href="#galerija">Galerija</a></li>
+      <li><a href="#cenovnik">Cenovnik</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+      <li><a href="#kontakt" class="nav-cta">Zakaži termin</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Otvori meni" aria-expanded="false" aria-controls="nav-links">
+      <span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO: split (reversed — visual left, text right) -->
+<section class="hero-split" aria-label="Naslovna" style="min-height:85vh;">
+  <div class="hero-split-visual" style="order:0;">
+    <!-- zameni pravom fotografijom -->
+    <img src="https://picsum.photos/seed/salon-hero/700/900"
+         alt="Beauty salon Studio Bella" loading="eager"
+         style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:0;">
+    <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(225,29,72,0.15),transparent);pointer-events:none;" aria-hidden="true"></div>
+  </div>
+  <div class="hero-split-text" style="order:1;background:#fff;">
+    <span class="section-label">Beauty &amp; Hair studio</span>
+    <h1>Prostor gde se<br>lepota <span class="text-accent">stvara</span></h1>
+    <p class="lead">Frizer, manikir, pedikir, šminkanje i tretmani lica — sve na jednom mestu. Iskusni tim koji zna šta žena želi.</p>
+    <div class="hero-btns" style="justify-content:flex-start;">
+      <a href="#kontakt" class="btn btn-primary btn-lg">Zakaži termin</a>
+      <a href="viber://chat?number=%2B38163XXXXXXX" class="btn btn-viber btn-lg">Viber</a>
+    </div>
+    <div style="display:flex;gap:2rem;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border);flex-wrap:wrap;">
+      <div><strong style="display:block;font-size:1.5rem;font-weight:800;color:var(--text);">8+</strong><span style="font-size:0.85rem;color:var(--text-muted);">godina iskustva</span></div>
+      <div><strong style="display:block;font-size:1.5rem;font-weight:800;color:var(--text);">2.000+</strong><span style="font-size:0.85rem;color:var(--text-muted);">zadovoljnih klijentica</span></div>
+      <div><strong style="display:block;font-size:1.5rem;font-weight:800;color:var(--accent);">★ 4.9</strong><span style="font-size:0.85rem;color:var(--text-muted);">prosečna ocena</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- USLUGE -->
+<section class="section" id="usluge" aria-labelledby="usluge-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="section-label">Naše usluge</span>
+      <h2 id="usluge-h2">Sve što vam treba za savršen izgled</h2>
+      <p>Kompletan beauty tretman od kose do noktiju, u opuštajućoj atmosferi.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </div>
+        <h3>Frizure i boja</h3>
+        <p>Šišanje, feniranje, kovrčanje, ravnanje i bojenje kose. Radimo sa premium bojama bez amonijaka.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0V11"/></svg>
+        </div>
+        <h3>Manikir i gel lak</h3>
+        <p>Klasični manikir, gel lak, akrilni nokti i nail art. Trajnost do 3 nedelje.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"/></svg>
+        </div>
+        <h3>Pedikir</h3>
+        <p>Medicinski i SPA pedikir. Uklanjanje žuljeva, tretman noktiju i masaža stopala.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+        </div>
+        <h3>Šminkanje</h3>
+        <p>Svakodnevno i event šminkanje. Mature, venčanja i posebne prilike. Korišćenje luksuzne kozmetike.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+        </div>
+        <h3>Tretmani lica</h3>
+        <p>Dubinsko čišćenje lica, hidratantni tretmani i anti-age procedura. Koža koja sja.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3>Produžetci trepavica</h3>
+        <p>Klasik, volume i mega-volume tehnika. Trajnost 3–4 nedelje uz pravilno održavanje.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CENOVNIK -->
+<section class="section section--alt" id="cenovnik" aria-labelledby="cena-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="section-label">Naše cene</span>
+      <h2 id="cena-h2">Cenovnik usluga</h2>
+      <p>Transparentne cene, bez iznenađenja. Popust 10% pri unapred zakazanom terminu.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;">
+      <div class="reveal">
+        <h3 class="menu-category-title">Frizure</h3>
+        <div class="menu-section">
+          <div class="menu-item"><div><div class="menu-item-name">Šišanje + feniranje</div><div class="menu-item-desc">Kratka kosa</div></div><div class="menu-item-price">1.800 rsd</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Šišanje + feniranje</div><div class="menu-item-desc">Duga kosa</div></div><div class="menu-item-price">2.400 rsd</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Boja (cela)</div><div class="menu-item-desc">Bez šampona i feniranja</div></div><div class="menu-item-price">od 3.000 rsd</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Pramenovi</div><div class="menu-item-desc">Folije, balayage</div></div><div class="menu-item-price">od 4.500 rsd</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Svečana frizura</div><div class="menu-item-desc">Event/venčanje</div></div><div class="menu-item-price">od 3.500 rsd</div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <h3 class="menu-category-title">Nokti &amp; lice</h3>
+        <div class="menu-section">
+          <div class="menu-item"><div><div class="menu-item-name">Gel lak manikir</div><div class="menu-item-desc">Trajnost 3 nedelje</div></div><div class="menu-item-price">1.500 rsd</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Akrilni nokti</div><div class="menu-item-desc">Gradnja + gel lak</div></div><div class="menu-item-price">2.800 rsd</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">SPA pedikir</div><div class="menu-item-desc">Tretman + masaža</div></div><div class="menu-item-price">2.200 rsd</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Šminkanje</div><div class="menu-item-desc">Dnevno</div></div><div class="menu-item-price">2.500 rsd</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Tretman lica</div><div class="menu-item-desc">Dubinsko čišćenje</div></div><div class="menu-item-price">3.200 rsd</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIJA -->
+<section class="section" id="galerija" aria-labelledby="galerija-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="section-label">Naši radovi</span>
+      <h2 id="galerija-h2">Inspiracija i rezultati</h2>
+    </div>
+    <div class="gallery-grid">
+      <!-- zameni pravim fotografijama -->
+      <div class="gallery-item reveal"><img src="https://picsum.photos/seed/salon1/800/600" alt="Frizura rezultat 1" loading="lazy"><div class="gallery-overlay" aria-hidden="true"></div></div>
+      <div class="gallery-item reveal"><img src="https://picsum.photos/seed/salon2/800/600" alt="Nokti rezultat" loading="lazy"><div class="gallery-overlay" aria-hidden="true"></div></div>
+      <div class="gallery-item reveal"><img src="https://picsum.photos/seed/salon3/800/600" alt="Šminkanje rezultat" loading="lazy"><div class="gallery-overlay" aria-hidden="true"></div></div>
+      <div class="gallery-item reveal"><img src="https://picsum.photos/seed/salon4/800/600" alt="Frizura rezultat 2" loading="lazy"><div class="gallery-overlay" aria-hidden="true"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- VIBER CTA -->
+<section class="cta-section" aria-labelledby="viber-h2">
+  <div class="cta-section-inner">
+    <h2 id="viber-h2">Zakažite termin putem Vibera</h2>
+    <p>Pišite nam u bilo koje vreme — odgovaramo brzo i dogovaramo termin koji vam odgovara.</p>
+    <div class="hero-btns">
+      <a href="viber://chat?number=%2B38163XXXXXXX" class="btn btn-white btn-lg">Viber poruka</a>
+      <a href="tel:+38163XXXXXXX" class="btn btn-ghost btn-lg">Pozovite nas</a>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="section section--alt" id="kontakt" aria-labelledby="kontakt-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <h2 id="kontakt-h2">Dođite kod nas</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+          <div class="contact-item-text"><strong>Adresa</strong><span>Ulica Mode 23, Beograd</span></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 0111.19 19 19.5 19.5 0 013.07 10.8 19.79 19.79 0 010 2.19 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div class="contact-item-text"><strong>Telefon / Viber</strong><a href="tel:+38163XXXXXXX">+381 63 XXX XX XX</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+          <div class="contact-item-text"><strong>Imejl</strong><a href="mailto:info@studiobella.rs">info@studiobella.rs</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+          <div class="contact-item-text"><strong>Radno vreme</strong><span>Pon–Sub 09:00–20:00</span></div>
+        </div>
+        <div class="contact-btns">
+          <a href="tel:+38163XXXXXXX" class="btn btn-primary">Pozovi</a>
+          <a href="viber://chat?number=%2B38163XXXXXXX" class="btn btn-viber">Viber</a>
+        </div>
+      </div>
+      <!-- zameni pravom Google Maps embed-om -->
+      <div class="map-placeholder reveal" role="img" aria-label="Mapa lokacije">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <span>Mapa lokacije<br><small>zameni Google Maps embed-om</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="footer-logo">Studio<span>Bella</span></a>
+        <p>Beauty i hair studio gde se lepota stvara sa pažnjom, stilom i ljubavlju prema poslu.</p>
+      </div>
+      <nav aria-label="Footer usluge">
+        <h4>Usluge</h4>
+        <ul>
+          <li><a href="#usluge">Frizure</a></li>
+          <li><a href="#usluge">Manikir</a></li>
+          <li><a href="#usluge">Pedikir</a></li>
+          <li><a href="#usluge">Šminkanje</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Footer info">
+        <h4>Salon</h4>
+        <ul>
+          <li><a href="#galerija">Galerija</a></li>
+          <li><a href="#cenovnik">Cenovnik</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Studio Bella · Ulica Mode 23, Beograd</span>
+      <a href="https://rondo.rs/sr/usluge/novo" target="_blank" rel="noopener">Sajt izradio rondo.rs</a>
+    </div>
+  </div>
+</footer>
+
+<div class="demo-bar" role="complementary" aria-label="Demo informacija">
+  <a href="https://rondo.rs/sr/usluge/novo" target="_blank" rel="noopener">
+    Demo dizajn — vaš sajt za <span class="demo-bar-hi">200€</span> · rondo.rs
+  </a>
+</div>
+
+<script src="../assets/base.js" defer></script>
+</body>
+</html>

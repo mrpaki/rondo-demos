@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProNekretnine — Demo dizajn | rondo.rs</title>
+  <meta name="description" content="Demo sajt za agenciju za nekretnine. Prodaja i iznajmljivanje stanova, kuća i poslovnih prostora.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" role="banner">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">Pro<span>Nekretnine</span></a>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="#oglasi">Oglasi</a></li>
+      <li><a href="#usluge">Usluge</a></li>
+      <li><a href="#agent">Agenti</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+      <li><a href="#kontakt" class="nav-cta">Besplatna procena</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Otvori meni" aria-expanded="false" aria-controls="nav-links">
+      <span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO: full-width photo + search bar -->
+<section class="hero-full" aria-label="Pretraži nekretnine">
+  <!-- zameni pravom fotografijom -->
+  <div class="hero-full-bg" style="background-image: url('https://picsum.photos/seed/realestate-hero/1800/900')" role="img" aria-label="Premium nekretnine — panorama Beograda"></div>
+  <div class="hero-full-overlay" aria-hidden="true"></div>
+  <div class="hero-full-content">
+    <h1>Pronađite dom<br>koji ste sanjali</h1>
+    <p>Više od 500 pažljivo odabranih nekretnina u Beogradu i okolini. Pouzdani agenti, brza realizacija.</p>
+  </div>
+  <!-- Search bar -->
+  <div class="search-bar" role="search" aria-label="Pretraga nekretnina">
+    <select aria-label="Tip nekretnine">
+      <option value="">Tip nekretnine</option>
+      <option>Stan</option><option>Kuća</option>
+      <option>Poslovni prostor</option><option>Plac</option><option>Garaža</option>
+    </select>
+    <select aria-label="Opština">
+      <option value="">Opština</option>
+      <option>Novi Beograd</option><option>Vračar</option><option>Voždovac</option>
+      <option>Zemun</option><option>Palilula</option><option>Stari Grad</option>
+    </select>
+    <select aria-label="Kvadratura">
+      <option value="">Kvadratura</option>
+      <option>do 40m²</option><option>40–60m²</option>
+      <option>60–90m²</option><option>90–130m²</option><option>130m²+</option>
+    </select>
+    <select aria-label="Cena">
+      <option value="">Cena</option>
+      <option>do 50.000€</option><option>50–80.000€</option>
+      <option>80–120.000€</option><option>120–200.000€</option><option>200.000€+</option>
+    </select>
+    <button class="btn btn-primary" type="button">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      Pretraži
+    </button>
+  </div>
+</section>
+
+<!-- FEATURED OGLASI -->
+<section class="section" id="oglasi" aria-labelledby="ogl-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="section-label">Istaknuti oglasi</span>
+      <h2 id="ogl-h2">Ponuđene nekretnine</h2>
+      <p>Ručno odabran izbor nekretnina koje se odlikuju lokacijom, kvalitetom izgradnje i povoljnom cenom.</p>
+    </div>
+    <div class="property-grid">
+      <div class="property-card reveal">
+        <!-- zameni pravom fotografijom -->
+        <div class="property-img">
+          <img src="https://picsum.photos/seed/estate1/800/500" alt="Stan u Novom Beogradu" loading="lazy">
+          <span class="property-tag">Prodaja</span>
+        </div>
+        <div class="property-body">
+          <div class="property-price">89.000 €</div>
+          <div class="property-title">Trosoban stan, Novi Beograd</div>
+          <div class="property-meta">
+            <span>🏠 67m²</span>
+            <span>🛏 3 sobe</span>
+            <span>🚿 1 kupatilo</span>
+            <span>📍 Blok 70</span>
+          </div>
+        </div>
+      </div>
+      <div class="property-card reveal">
+        <!-- zameni pravom fotografijom -->
+        <div class="property-img">
+          <img src="https://picsum.photos/seed/estate2/800/500" alt="Kuća na Vračaru" loading="lazy">
+          <span class="property-tag" style="background:#059669;">Iznajmljivanje</span>
+        </div>
+        <div class="property-body">
+          <div class="property-price">650 € / mes</div>
+          <div class="property-title">Dvosoban stan, Vračar</div>
+          <div class="property-meta">
+            <span>🏠 52m²</span>
+            <span>🛏 2 sobe</span>
+            <span>🚿 1 kupatilo</span>
+            <span>📍 Centar</span>
+          </div>
+        </div>
+      </div>
+      <div class="property-card reveal">
+        <!-- zameni pravom fotografijom -->
+        <div class="property-img">
+          <img src="https://picsum.photos/seed/estate3/800/500" alt="Poslovni prostor Zemun" loading="lazy">
+          <span class="property-tag">Prodaja</span>
+        </div>
+        <div class="property-body">
+          <div class="property-price">145.000 €</div>
+          <div class="property-title">Kuća sa placem, Zemun</div>
+          <div class="property-meta">
+            <span>🏠 120m²</span>
+            <span>🛏 4 sobe</span>
+            <span>🚿 2 kupatila</span>
+            <span>📍 Zemun Polje</span>
+          </div>
+        </div>
+      </div>
+      <div class="property-card reveal">
+        <!-- zameni pravom fotografijom -->
+        <div class="property-img">
+          <img src="https://picsum.photos/seed/estate4/800/500" alt="Garsonjera Stari Grad" loading="lazy">
+          <span class="property-tag" style="background:#059669;">Iznajmljivanje</span>
+        </div>
+        <div class="property-body">
+          <div class="property-price">380 € / mes</div>
+          <div class="property-title">Garsonjera, Stari Grad</div>
+          <div class="property-meta">
+            <span>🏠 28m²</span>
+            <span>🛏 1 soba</span>
+            <span>🚿 1 kupatilo</span>
+            <span>📍 Terazije</span>
+          </div>
+        </div>
+      </div>
+      <div class="property-card reveal">
+        <!-- zameni pravom fotografijom -->
+        <div class="property-img">
+          <img src="https://picsum.photos/seed/estate5/800/500" alt="Poslovni prostor" loading="lazy">
+          <span class="property-tag">Prodaja</span>
+        </div>
+        <div class="property-body">
+          <div class="property-price">78.000 €</div>
+          <div class="property-title">Poslovni prostor, Palilula</div>
+          <div class="property-meta">
+            <span>🏢 85m²</span>
+            <span>📦 Prizemlje</span>
+            <span>🅿️ 2 parking mesta</span>
+            <span>📍 Bulevar</span>
+          </div>
+        </div>
+      </div>
+      <div class="property-card reveal">
+        <!-- zameni pravom fotografijom -->
+        <div class="property-img">
+          <img src="https://picsum.photos/seed/estate6/800/500" alt="Četvorosoban stan Voždovac" loading="lazy">
+          <span class="property-tag">Prodaja</span>
+        </div>
+        <div class="property-body">
+          <div class="property-price">112.000 €</div>
+          <div class="property-title">Četvorosoban stan, Voždovac</div>
+          <div class="property-meta">
+            <span>🏠 92m²</span>
+            <span>🛏 4 sobe</span>
+            <span>🚿 2 kupatila</span>
+            <span>📍 Rakovica</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:3rem;" class="reveal">
+      <a href="#kontakt" class="btn btn-outline btn-lg">Prikaži sve oglase</a>
+    </div>
+  </div>
+</section>
+
+<!-- USLUGE AGENCIJE -->
+<section class="section section--alt" id="usluge" aria-labelledby="usl-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="section-label">Naše usluge</span>
+      <h2 id="usl-h2">Kompletna podrška pri kupovini i prodaji</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg></div>
+        <h3>Pretraga i selekcija</h3>
+        <p>Filtriramo ponudu po vašim kriterijumima i zakazujemo razglede samo odabranih nekretnina.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div>
+        <h3>Pravna podrška</h3>
+        <p>Priprema ugovora, provera vlasništva, provera tereta i saradnja sa javnim beležnikom.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div>
+        <h3>Besplatna procena vrednosti</h3>
+        <p>Procenite tržišnu vrednost vaše nekretnine na osnovu aktuelnih podataka iz celog Beograda.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENT -->
+<section class="section" id="agent" aria-labelledby="ag-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="section-label">Vaš agent</span>
+      <h2 id="ag-h2">Uvek uz vas</h2>
+    </div>
+    <div class="agent-card reveal">
+      <!-- zameni pravom fotografijom -->
+      <div class="agent-avatar"><img src="https://picsum.photos/seed/agent1/200/200" alt="Marija Jović, senior agent" loading="lazy"></div>
+      <div>
+        <div class="agent-name">Marija Jović</div>
+        <span class="agent-title">Senior nekretninski agent</span>
+        <p style="margin-bottom:1.25rem;">Više od 10 godina iskustva na beogradskom tržištu nekretnina. Specijalistkinja za stambene nekretnine u centralnim opštinama. Vaši interesi su njena misija.</p>
+        <div class="contact-btns">
+          <a href="tel:+38163XXXXXXX" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 0111.19 19 19.5 19.5 0 013.07 10.8 19.79 19.79 0 010 2.19 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            +381 63 XXX XX XX
+          </a>
+          <a href="viber://chat?number=%2B38163XXXXXXX" class="btn btn-viber">Viber</a>
+          <a href="mailto:marija@pronekretnine.rs" class="btn btn-outline">Imejl</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="section section--alt" id="kontakt" aria-labelledby="kontakt-h2">
+  <div class="container">
+    <div class="section-title reveal"><h2 id="kontakt-h2">Kontaktirajte agenciju</h2></div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+          <div class="contact-item-text"><strong>Adresa</strong><span>Bulevar Oslobođenja 100, Beograd</span></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 0111.19 19 19.5 19.5 0 013.07 10.8 19.79 19.79 0 010 2.19 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div class="contact-item-text"><strong>Telefon</strong><a href="tel:+38163XXXXXXX">+381 63 XXX XX XX</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+          <div class="contact-item-text"><strong>Imejl</strong><a href="mailto:info@pronekretnine.rs">info@pronekretnine.rs</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+          <div class="contact-item-text"><strong>Radno vreme</strong><span>Pon–Pet 09:00–18:00 · Sub 10:00–14:00</span></div>
+        </div>
+        <div class="contact-btns">
+          <a href="tel:+38163XXXXXXX" class="btn btn-primary">Pozovite</a>
+          <a href="viber://chat?number=%2B38163XXXXXXX" class="btn btn-viber">Viber</a>
+        </div>
+      </div>
+      <!-- zameni pravom Google Maps embed-om -->
+      <div class="map-placeholder reveal" role="img" aria-label="Mapa lokacije agencije">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <span>Mapa lokacije<br><small>zameni Google Maps embed-om</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="footer-logo">Pro<span>Nekretnine</span></a>
+        <p>Premium agencija za nekretnine sa više od decenije iskustva na beogradskom tržištu.</p>
+      </div>
+      <nav aria-label="Footer kategorije">
+        <h4>Kategorije</h4>
+        <ul>
+          <li><a href="#oglasi">Stanovi</a></li>
+          <li><a href="#oglasi">Kuće</a></li>
+          <li><a href="#oglasi">Poslovni prostori</a></li>
+          <li><a href="#oglasi">Iznajmljivanje</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Footer info">
+        <h4>Agencija</h4>
+        <ul>
+          <li><a href="#usluge">Usluge</a></li>
+          <li><a href="#agent">Naši agenti</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 ProNekretnine · Bulevar Oslobođenja 100, Beograd · Licenca: XXXXXXX</span>
+      <a href="https://rondo.rs/sr/usluge/novo" target="_blank" rel="noopener">Sajt izradio rondo.rs</a>
+    </div>
+  </div>
+</footer>
+
+<div class="demo-bar" role="complementary" aria-label="Demo informacija">
+  <a href="https://rondo.rs/sr/usluge/novo" target="_blank" rel="noopener">
+    Demo dizajn — vaš sajt za <span class="demo-bar-hi">200€</span> · rondo.rs
+  </a>
+</div>
+
+<script src="../assets/base.js" defer></script>
+</body>
+</html>

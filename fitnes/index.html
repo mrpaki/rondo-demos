@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitZona — Demo dizajn | rondo.rs</title>
+  <meta name="description" content="Demo sajt za fitnes centar. Tereti sala, grupni treninzi, yoga i personalni trening.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+<!-- NAV (dark) -->
+<header class="nav" style="background:rgba(15,23,42,0.96);border-bottom-color:#334155;" role="banner">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo" style="color:#f1f5f9;">Fit<span>Zona</span></a>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="#clanarine" style="color:#94a3b8;">Članarine</a></li>
+      <li><a href="#raspored" style="color:#94a3b8;">Raspored</a></li>
+      <li><a href="#usluge" style="color:#94a3b8;">Usluge</a></li>
+      <li><a href="#kontakt" style="color:#94a3b8;">Kontakt</a></li>
+      <li><a href="#probni" class="nav-cta">Probni trening</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Otvori meni" aria-expanded="false" aria-controls="nav-links" style="color:#f1f5f9;">
+      <span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO: energetic dark gradient -->
+<section class="hero-gradient" aria-label="Naslovna">
+  <div class="container">
+    <div class="hero-gradient-content">
+      <span class="section-label">Fitnes centar · Beograd</span>
+      <h1>Tvoj put do<br><span class="text-accent">boljeg sebe</span></h1>
+      <p>Moderna oprema, stručni treneri i atmosfera koja motiviše. Bez izgovora — počni danas.</p>
+      <div class="hero-btns" style="justify-content:flex-start;">
+        <a href="#probni" class="btn btn-primary btn-lg">Probni trening — besplatno</a>
+        <a href="#clanarine" class="btn" style="background:rgba(132,204,22,0.15);color:#84cc16;border-color:rgba(132,204,22,0.4);">Pogledaj cene</a>
+      </div>
+      <div style="display:flex;gap:2.5rem;margin-top:3rem;flex-wrap:wrap;">
+        <div><strong style="display:block;font-size:1.75rem;font-weight:900;color:#84cc16;">500m²</strong><span style="font-size:0.85rem;color:#64748b;">opremljene sale</span></div>
+        <div><strong style="display:block;font-size:1.75rem;font-weight:900;color:#84cc16;">20+</strong><span style="font-size:0.85rem;color:#64748b;">grupnih programa</span></div>
+        <div><strong style="display:block;font-size:1.75rem;font-weight:900;color:#84cc16;">7</strong><span style="font-size:0.85rem;color:#64748b;">stručnih trenera</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ČLANARINE -->
+<section class="section" id="clanarine" aria-labelledby="clan-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="section-label">Planovi</span>
+      <h2 id="clan-h2">Izaberi svoju članarinu</h2>
+      <p>Fleksibilni planovi bez dugoročnih ugovora. Svaka članarina uključuje slobodan pristup teretani.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card reveal">
+        <h3>Basic</h3>
+        <p style="font-size:0.9rem;">Teretana + kardio</p>
+        <div class="pricing-price">2.500<sub> rsd/mes</sub></div>
+        <ul class="pricing-list">
+          <li>Teretana — neograničeno</li>
+          <li>Kardio zona</li>
+          <li>Svlačionice + tuševi</li>
+          <li>Pon–Sub 06–22h</li>
+        </ul>
+        <a href="#kontakt" class="btn btn-outline" style="width:100%;justify-content:center;">Odaberi</a>
+      </div>
+      <div class="pricing-card featured reveal">
+        <div class="pricing-badge">Najpopularnije</div>
+        <h3>Standard</h3>
+        <p style="font-size:0.9rem;">Teretana + grupni treninzi</p>
+        <div class="pricing-price">3.500<sub> rsd/mes</sub></div>
+        <ul class="pricing-list">
+          <li>Sve iz Basic plana</li>
+          <li>Grupni treninzi (neograničeno)</li>
+          <li>Yoga i pilates</li>
+          <li>Analiza tela 1×/mes</li>
+        </ul>
+        <a href="#kontakt" class="btn btn-primary" style="width:100%;justify-content:center;">Odaberi</a>
+      </div>
+      <div class="pricing-card reveal">
+        <h3>Premium</h3>
+        <p style="font-size:0.9rem;">Sve + personalni trening</p>
+        <div class="pricing-price">5.000<sub> rsd/mes</sub></div>
+        <ul class="pricing-list">
+          <li>Sve iz Standard plana</li>
+          <li>4× personalni trening/mes</li>
+          <li>Plan ishrane</li>
+          <li>Prioritetno zakazivanje</li>
+          <li>7 dana / 24h pristup</li>
+        </ul>
+        <a href="#kontakt" class="btn btn-outline" style="width:100%;justify-content:center;">Odaberi</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RASPORED -->
+<section class="section section--alt" id="raspored" aria-labelledby="rasp-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="section-label">Nedeljni raspored</span>
+      <h2 id="rasp-h2">Grupni treninzi — Ova nedelja</h2>
+      <p>Rezervišite mesto u aplikaciji ili direktno na recepciji do sat vremena pre treninga.</p>
+    </div>
+    <div class="schedule-wrap reveal">
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Vreme</th>
+            <th>Ponedeljak</th>
+            <th>Utorak</th>
+            <th>Sreda</th>
+            <th>Četvrtak</th>
+            <th>Petak</th>
+            <th>Subota</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>07:00</strong></td>
+            <td>Jutarnji aerobik <span class="badge badge-green">slobodnih 5</span></td>
+            <td>—</td>
+            <td>Jutarnji aerobik <span class="badge badge-green">slobodnih 3</span></td>
+            <td>—</td>
+            <td>Jutarnji aerobik <span class="badge badge-blue">5 mesta</span></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><strong>09:00</strong></td>
+            <td>Yoga <span class="badge badge-green">slobodnih 8</span></td>
+            <td>Pilates <span class="badge badge-amber">2 mesta</span></td>
+            <td>Yoga <span class="badge badge-green">slobodnih 7</span></td>
+            <td>Pilates <span class="badge badge-green">slobodnih 6</span></td>
+            <td>—</td>
+            <td>Yoga <span class="badge badge-green">slobodnih 4</span></td>
+          </tr>
+          <tr>
+            <td><strong>11:00</strong></td>
+            <td>—</td>
+            <td>Zumba <span class="badge badge-green">slobodnih 10</span></td>
+            <td>—</td>
+            <td>Zumba <span class="badge badge-red">popunjeno</span></td>
+            <td>—</td>
+            <td>Zumba <span class="badge badge-blue">4 mesta</span></td>
+          </tr>
+          <tr>
+            <td><strong>17:00</strong></td>
+            <td>Crossfit <span class="badge badge-amber">3 mesta</span></td>
+            <td>Body pump <span class="badge badge-green">slobodnih 6</span></td>
+            <td>Crossfit <span class="badge badge-red">popunjeno</span></td>
+            <td>Body pump <span class="badge badge-green">slobodnih 8</span></td>
+            <td>Crossfit <span class="badge badge-amber">2 mesta</span></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><strong>19:00</strong></td>
+            <td>Body pump <span class="badge badge-green">slobodnih 4</span></td>
+            <td>Crossfit <span class="badge badge-amber">3 mesta</span></td>
+            <td>Body pump <span class="badge badge-green">slobodnih 9</span></td>
+            <td>Crossfit <span class="badge badge-red">popunjeno</span></td>
+            <td>Body pump <span class="badge badge-green">slobodnih 5</span></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><strong>20:30</strong></td>
+            <td>Yoga <span class="badge badge-green">slobodnih 7</span></td>
+            <td>Yoga <span class="badge badge-green">slobodnih 5</span></td>
+            <td>Yoga <span class="badge badge-amber">2 mesta</span></td>
+            <td>Yoga <span class="badge badge-green">slobodnih 8</span></td>
+            <td>Yoga <span class="badge badge-green">slobodnih 6</span></td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="text-align:center;margin-top:1rem;font-size:0.85rem;"><span class="badge badge-green">zeleno</span> slobodna mesta · <span class="badge badge-amber">narandžasto</span> poslednja mesta · <span class="badge badge-red">crveno</span> popunjeno</p>
+  </div>
+</section>
+
+<!-- USLUGE -->
+<section class="section" id="usluge" aria-labelledby="usl-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="section-label">Naša ponuda</span>
+      <h2 id="usl-h2">Sve što trebaš za transformaciju</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4.5 9.5a.5.5 0 000 1H6a.5.5 0 000-1H4.5zM18 9.5a.5.5 0 000 1h1.5a.5.5 0 000-1H18zM9 6.5v1M9 16.5v1M15 6.5v1M15 16.5v1M6 9.5h12v5H6z"/></svg></div>
+        <h3>Teretana</h3>
+        <p>500m² sale sa najnovijom opremom: slobodni tegovi, mašine za sve mišićne grupe i kardio zona.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+        <h3>Personalni trening</h3>
+        <p>Individualni program sa certifikovanim personalnim trenerom. Plan prilagođen vašem cilju i stanju.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div>
+        <h3>Yoga i pilates</h3>
+        <p>Jutarnje i večernje grupe. Sve nivoe dobrodošlice — od potpunih početnika do naprednih praktičara.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div>
+        <h3>Analiza tela i plan</h3>
+        <p>InBody analiza tela, merenje mišića i masti, i personalizovani trening plan na osnovu rezultata.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBNI TRENING CTA -->
+<section class="cta-section" id="probni" aria-labelledby="probni-h2">
+  <div class="cta-section-inner">
+    <h2 id="probni-h2">Probni trening — potpuno besplatno</h2>
+    <p>Dođi, prouči opremu, upoznaj tim i odlazi bez ikakve obaveze. Nema skrivenih troškova.</p>
+    <div class="hero-btns">
+      <a href="tel:+38163XXXXXXX" class="btn btn-white btn-lg">Zakaži probni: +381 63 XXX XX XX</a>
+      <a href="viber://chat?number=%2B38163XXXXXXX" class="btn btn-ghost btn-lg">Viber poruka</a>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="section section--alt" id="kontakt" aria-labelledby="kontakt-h2">
+  <div class="container">
+    <div class="section-title reveal"><h2 id="kontakt-h2">Dođi do nas</h2></div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+          <div class="contact-item-text"><strong>Adresa</strong><span>Sportska 5, Beograd</span></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 0111.19 19 19.5 19.5 0 013.07 10.8 19.79 19.79 0 010 2.19 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div class="contact-item-text"><strong>Telefon / Viber</strong><a href="tel:+38163XXXXXXX">+381 63 XXX XX XX</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+          <div class="contact-item-text"><strong>Radno vreme</strong><span>Pon–Pet 06:00–22:00 · Sub–Ned 08:00–20:00</span></div>
+        </div>
+        <div class="contact-btns">
+          <a href="tel:+38163XXXXXXX" class="btn btn-primary">Pozovi</a>
+          <a href="viber://chat?number=%2B38163XXXXXXX" class="btn btn-viber">Viber</a>
+        </div>
+      </div>
+      <!-- zameni pravom Google Maps embed-om -->
+      <div class="map-placeholder reveal" role="img" aria-label="Mapa lokacije FitZone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <span>Mapa lokacije<br><small>zameni Google Maps embed-om</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="footer-logo">Fit<span>Zona</span></a>
+        <p>Moderna sala, stručni treneri i zajednica koja podstiče. Tvoja transformacija počinje ovde.</p>
+      </div>
+      <nav aria-label="Footer programi">
+        <h4>Programi</h4>
+        <ul>
+          <li><a href="#raspored">Groupni treninzi</a></li>
+          <li><a href="#usluge">Personalni trening</a></li>
+          <li><a href="#usluge">Yoga / Pilates</a></li>
+          <li><a href="#probni">Probni trening</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Footer info">
+        <h4>Centar</h4>
+        <ul>
+          <li><a href="#clanarine">Članarine</a></li>
+          <li><a href="#raspored">Raspored</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 FitZona · Sportska 5, Beograd</span>
+      <a href="https://rondo.rs/sr/usluge/novo" target="_blank" rel="noopener">Sajt izradio rondo.rs</a>
+    </div>
+  </div>
+</footer>
+
+<div class="demo-bar" role="complementary" aria-label="Demo informacija">
+  <a href="https://rondo.rs/sr/usluge/novo" target="_blank" rel="noopener">
+    Demo dizajn — vaš sajt za <span class="demo-bar-hi">200€</span> · rondo.rs
+  </a>
+</div>
+
+<script src="../assets/base.js" defer></script>
+</body>
+</html>

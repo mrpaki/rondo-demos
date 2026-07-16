@@ -1,0 +1,16 @@
+/* ADVOKAT — accent: navy #1e3a8a, hero: dark centered, serif */
+:root {
+  --accent: #1e3a8a;
+  --accent-darker: #1e3a8a;
+}
+
+/* Serif headings throughout */
+h1, h2, h3 { font-family: var(--font-serif); }
+
+/* Darker hero gradient for authority */
+.hero-dark-centered {
+  background: linear-gradient(160deg, #060d1f 0%, #1e3a8a 100%);
+}
+
+/* Section labels more subdued */
+.section-label { background: #dbeafe; color: #1e3a8a; }

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restoran Raskrsnica — Demo dizajn | rondo.rs</title>
+  <meta name="description" content="Demo sajt za restoran. Domaća kuhinja, sveži sastojci, topla atmosfera i laka rezervacija.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" role="banner">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">Raskrsnica<span>.</span></a>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="#meni">Meni</a></li>
+      <li><a href="#galerija">Ambijent</a></li>
+      <li><a href="#rezervacija">Rezervacija</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+      <li><a href="#rezervacija" class="nav-cta">Rezervišite sto</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Otvori meni" aria-expanded="false" aria-controls="nav-links">
+      <span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO: photo warm -->
+<section class="hero-photo" aria-label="Naslovna">
+  <!-- zameni pravom fotografijom -->
+  <div class="hero-photo-bg" style="background-image: url('https://picsum.photos/seed/restoran-hero/1600/900')" role="img" aria-label="Restoran Raskrsnica — topla atmosfera i ukusna hrana"></div>
+  <div class="hero-photo-overlay" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero-photo-content">
+      <span class="section-label" style="background:rgba(255,255,255,0.15);color:#fff;">Domaća kuhinja · Beograd</span>
+      <h1>Domaća kuhinja<br>sa dušom</h1>
+      <p class="lead">Svaki obrok pripremamo od svežih, lokalnih namirnica po receptima koji se prenose s kolena na koleno. Dođite gladni, otidite srećni.</p>
+      <div class="hero-btns">
+        <a href="#rezervacija" class="btn btn-primary btn-lg">Rezervišite sto</a>
+        <a href="#meni" class="btn btn-ghost btn-lg">Pogledaj meni</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENI -->
+<section class="section" id="meni" aria-labelledby="meni-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="section-label">Šta kuvamo</span>
+      <h2 id="meni-h2">Naš meni</h2>
+      <p>Klasična srpska i balkanska kuhinja sa sezonskim specijalitetima. Cene su okvirne i mogu se razlikovati.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:2rem;">
+      <div class="reveal">
+        <div class="menu-section">
+          <h3 class="menu-category-title">Predjela</h3>
+          <div class="menu-item"><div><div class="menu-item-name">Mešano predjelo</div><div class="menu-item-desc">Kajmak, ajvar, pečenica, sir</div></div><div class="menu-item-price">890 rsd</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Čorbа od povrća</div><div class="menu-item-desc">Domaća, sezonska</div></div><div class="menu-item-price">390 rsd</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Pilećа čorba</div><div class="menu-item-desc">Sa domaćim rezancima</div></div><div class="menu-item-price">450 rsd</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Srpska salata</div><div class="menu-item-desc">Paradajz, krastavac, luk, maslinovo ulje</div></div><div class="menu-item-price">350 rsd</div></div>
+        </div>
+        <div class="menu-section">
+          <h3 class="menu-category-title">Glavna jela</h3>
+          <div class="menu-item"><div><div class="menu-item-name">Sač — jagnjećina</div><div class="menu-item-desc">Sporo pečena 6 sati, sa povrćem</div></div><div class="menu-item-price">1.690 rsd</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Šaran sa roštiljem</div><div class="menu-item-desc">Svež šaran, domaće meso</div></div><div class="menu-item-price">1.290 rsd</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Punjene paprike</div><div class="menu-item-desc">Goveđe meso, pirinač, paradajz sos</div></div><div class="menu-item-price">890 rsd</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Mešano meso</div><div class="menu-item-desc">Pljeskavica, ćevapi, ražnjić</div></div><div class="menu-item-price">1.190 rsd</div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="menu-section">
+          <h3 class="menu-category-title">Deserti</h3>
+          <div class="menu-item"><div><div class="menu-item-name">Kremita</div><div class="menu-item-desc">Domaća, kremasta</div></div><div class="menu-item-price">390 rsd</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Tufahije</div><div class="menu-item-desc">Jabuka u sirupu, orah</div></div><div class="menu-item-price">420 rsd</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Šljivovačа</div><div class="menu-item-desc">Pita sa šljivama i orasima</div></div><div class="menu-item-price">350 rsd</div></div>
+        </div>
+        <div class="menu-section">
+          <h3 class="menu-category-title">Pića</h3>
+          <div class="menu-item"><div><div class="menu-item-name">Domaća rakija</div><div class="menu-item-desc">Šljiva, kajsija, dunja</div></div><div class="menu-item-price">350 rsd</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Vino — čaša</div><div class="menu-item-desc">Belo / Crveno / Roze</div></div><div class="menu-item-price">300 rsd</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Sok od šljive</div><div class="menu-item-desc">Domaći, svež</div></div><div class="menu-item-price">250 rsd</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Kafa</div><div class="menu-item-desc">Domaća / Espresso</div></div><div class="menu-item-price">150 rsd</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIJA AMBIJENTA -->
+<section class="section section--alt" id="galerija" aria-labelledby="gal-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="section-label">Naš prostor</span>
+      <h2 id="gal-h2">Topla atmosfera za svaki povod</h2>
+    </div>
+    <div class="gallery-grid">
+      <!-- zameni pravim fotografijama -->
+      <div class="gallery-item reveal"><img src="https://picsum.photos/seed/food1/800/600" alt="Enterijer restorana" loading="lazy"><div class="gallery-overlay" aria-hidden="true"></div></div>
+      <div class="gallery-item reveal"><img src="https://picsum.photos/seed/food2/800/600" alt="Specijalitet kuhinje" loading="lazy"><div class="gallery-overlay" aria-hidden="true"></div></div>
+      <div class="gallery-item reveal"><img src="https://picsum.photos/seed/food3/800/600" alt="Mešano predjelo" loading="lazy"><div class="gallery-overlay" aria-hidden="true"></div></div>
+      <div class="gallery-item reveal"><img src="https://picsum.photos/seed/food4/800/600" alt="Terasa restorana" loading="lazy"><div class="gallery-overlay" aria-hidden="true"></div></div>
+      <div class="gallery-item reveal"><img src="https://picsum.photos/seed/food5/800/600" alt="Desert" loading="lazy"><div class="gallery-overlay" aria-hidden="true"></div></div>
+      <div class="gallery-item reveal"><img src="https://picsum.photos/seed/food6/800/600" alt="Porodični sto" loading="lazy"><div class="gallery-overlay" aria-hidden="true"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- REZERVACIJA -->
+<section class="section" id="rezervacija" aria-labelledby="rez-h2">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;">
+      <div class="reveal">
+        <span class="section-label">Rezervišite sto</span>
+        <h2 id="rez-h2">Osigurajte svoje mesto</h2>
+        <p style="margin-bottom:1.5rem;">Rezervacija je besplatna i potvrđujemo je u roku od sat vremena. Za veće grupe i slavlja pozovite nas direktno.</p>
+        <div class="why-grid" style="grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem;">
+          <div class="why-item" style="padding:1rem;background:var(--bg-alt);border-radius:var(--radius-lg);">
+            <div class="why-num" style="font-size:1.8rem;">40</div>
+            <p style="font-size:0.85rem;">mesta u enterijeru</p>
+          </div>
+          <div class="why-item" style="padding:1rem;background:var(--bg-alt);border-radius:var(--radius-lg);">
+            <div class="why-num" style="font-size:1.8rem;">30</div>
+            <p style="font-size:0.85rem;">mesta na terasi</p>
+          </div>
+        </div>
+        <div style="margin-top:1.5rem;">
+          <p><strong>Telefon:</strong> <a href="tel:+38163XXXXXXX" style="color:var(--accent);">+381 63 XXX XX XX</a></p>
+          <p style="margin-top:0.5rem;"><strong>Radno vreme:</strong> Pon–Ned 11:00–23:00</p>
+        </div>
+      </div>
+      <div class="quick-form reveal">
+        <h3>Rezervišite sto</h3>
+        <div class="form-group">
+          <label for="ime">Ime i prezime</label>
+          <input type="text" id="ime" placeholder="Ime Prezimić" autocomplete="name">
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div class="form-group">
+            <label for="datum">Datum</label>
+            <input type="date" id="datum">
+          </div>
+          <div class="form-group">
+            <label for="vreme">Vreme</label>
+            <select id="vreme">
+              <option>12:00</option><option>13:00</option><option>14:00</option>
+              <option>18:00</option><option>19:00</option><option>20:00</option>
+              <option>21:00</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="osobe">Broj osoba</label>
+          <select id="osobe">
+            <option>1–2 osobe</option><option>3–4 osobe</option>
+            <option>5–8 osoba</option><option>9–15 osoba</option>
+            <option>16+ (slavlje)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="napomena">Napomena (alergije, povod...)</label>
+          <textarea id="napomena" style="min-height:80px;" placeholder="Proslava rođendana, alergija na gluten..."></textarea>
+        </div>
+        <button class="btn btn-primary" style="width:100%;justify-content:center;" type="button">Potvrdi rezervaciju</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="section section--alt" id="kontakt" aria-labelledby="kontakt-h2">
+  <div class="container">
+    <div class="section-title reveal"><h2 id="kontakt-h2">Gde nas nađete</h2></div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+          <div class="contact-item-text"><strong>Adresa</strong><span>Česme bb, Beograd</span></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 0111.19 19 19.5 19.5 0 013.07 10.8 19.79 19.79 0 010 2.19 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div class="contact-item-text"><strong>Rezervacije</strong><a href="tel:+38163XXXXXXX">+381 63 XXX XX XX</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+          <div class="contact-item-text"><strong>Radno vreme</strong><span>Svaki dan 11:00–23:00</span></div>
+        </div>
+        <div class="contact-btns">
+          <a href="tel:+38163XXXXXXX" class="btn btn-primary">Pozovi</a>
+          <a href="viber://chat?number=%2B38163XXXXXXX" class="btn btn-viber">Viber</a>
+        </div>
+      </div>
+      <!-- zameni pravom Google Maps embed-om -->
+      <div class="map-placeholder reveal" role="img" aria-label="Mapa lokacije restorana">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <span>Mapa lokacije<br><small>zameni Google Maps embed-om</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="footer-logo">Raskrsnica<span>.</span></a>
+        <p>Domaća kuhinja sa dušom. Svaki zalogaj priča priču o tradiciji i ljubavi prema hrani.</p>
+      </div>
+      <nav aria-label="Footer meni">
+        <h4>Meni</h4>
+        <ul>
+          <li><a href="#meni">Predjela</a></li>
+          <li><a href="#meni">Glavna jela</a></li>
+          <li><a href="#meni">Deserti</a></li>
+          <li><a href="#meni">Pića</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Footer info">
+        <h4>Restoran</h4>
+        <ul>
+          <li><a href="#galerija">Ambijent</a></li>
+          <li><a href="#rezervacija">Rezervacija</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Restoran Raskrsnica · Češme bb, Beograd</span>
+      <a href="https://rondo.rs/sr/usluge/novo" target="_blank" rel="noopener">Sajt izradio rondo.rs</a>
+    </div>
+  </div>
+</footer>
+
+<div class="demo-bar" role="complementary" aria-label="Demo informacija">
+  <a href="https://rondo.rs/sr/usluge/novo" target="_blank" rel="noopener">
+    Demo dizajn — vaš sajt za <span class="demo-bar-hi">200€</span> · rondo.rs
+  </a>
+</div>
+
+<script src="../assets/base.js" defer></script>
+</body>
+</html>

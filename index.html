@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rondo.rs Demo Sajtovi — Šabloni po delatnosti</title>
+  <meta name="description" content="10 gotovih demo landing stranica po delatnosti. Pogledajte kako može izgledati vaš sajt — medicinska, stomatološka, salon, restoran, advokat, gradjevina, fitnes, nekretnine, autoservis i auto delovi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #0f172a;
+      color: #f1f5f9;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 52px;
+    }
+
+    /* NAV */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,23,42,0.96); backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 0 clamp(1rem, 4vw, 2rem);
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center;
+      justify-content: space-between; height: 64px;
+    }
+    .nav-logo {
+      font-weight: 800; font-size: 1.2rem;
+      color: #f1f5f9; text-decoration: none;
+    }
+    .nav-logo span { color: #3b82f6; }
+    .nav-badge {
+      background: rgba(59,130,246,0.15); color: #60a5fa;
+      border: 1px solid rgba(59,130,246,0.3);
+      font-size: 0.78rem; font-weight: 600;
+      padding: 0.3rem 0.8rem; border-radius: 999px;
+    }
+
+    /* HERO */
+    .hero {
+      padding: clamp(5rem, 12vw, 9rem) clamp(1rem, 4vw, 2rem) clamp(4rem, 8vw, 6rem);
+      text-align: center;
+      background: radial-gradient(ellipse at 50% 0%, rgba(59,130,246,0.15) 0%, transparent 70%);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .hero-label {
+      display: inline-block;
+      background: rgba(59,130,246,0.15); color: #60a5fa;
+      border: 1px solid rgba(59,130,246,0.25);
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 0.35rem 1rem;
+      border-radius: 999px; margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      font-weight: 800; line-height: 1.1;
+      color: #f8fafc; margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+    .hero h1 em { font-style: normal; color: #3b82f6; }
+    .hero p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: #94a3b8; max-width: 620px; margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+    .hero-cta {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: #3b82f6; color: #fff;
+      padding: 0.9rem 2rem; border-radius: 8px;
+      text-decoration: none; font-weight: 700; font-size: 1rem;
+      transition: filter 0.2s, transform 0.2s;
+    }
+    .hero-cta:hover { filter: brightness(1.1); transform: translateY(-1px); }
+    .hero-stats {
+      display: flex; justify-content: center; flex-wrap: wrap; gap: 2.5rem;
+      margin-top: 4rem; padding-top: 3rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .hero-stat strong { display: block; font-size: 2rem; font-weight: 900; color: #f8fafc; }
+    .hero-stat span { font-size: 0.85rem; color: #64748b; }
+
+    /* GRID */
+    .container {
+      max-width: 1200px; margin: 0 auto;
+      padding: 0 clamp(1rem, 4vw, 2rem);
+    }
+    .section {
+      padding: clamp(3rem, 8vw, 5rem) 0;
+    }
+    .section-title {
+      text-align: center; margin-bottom: 3rem;
+    }
+    .section-title h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800; color: #f8fafc; margin-bottom: 0.6rem;
+    }
+    .section-title p { color: #64748b; font-size: 1rem; }
+
+    /* DEMO CARDS */
+    .demos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .demo-card {
+      background: #1e293b;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px; overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      text-decoration: none; display: block;
+      position: relative;
+    }
+    .demo-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+    }
+    .demo-card:focus-visible {
+      outline: 3px solid #3b82f6; outline-offset: 3px;
+    }
+    .demo-card-accent {
+      height: 4px;
+    }
+    .demo-card-body {
+      padding: 1.5rem;
+    }
+    .demo-card-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1rem; font-size: 1.4rem;
+    }
+    .demo-card h3 {
+      font-size: 1.05rem; font-weight: 700;
+      color: #f1f5f9; margin-bottom: 0.35rem;
+    }
+    .demo-card-sub {
+      font-size: 0.8rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      opacity: 0.6; margin-bottom: 0.6rem;
+    }
+    .demo-card p {
+      font-size: 0.88rem; color: #64748b; line-height: 1.6; margin-bottom: 1.25rem;
+    }
+    .demo-card-footer {
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .demo-card-sections {
+      display: flex; flex-wrap: wrap; gap: 0.4rem;
+    }
+    .chip {
+      font-size: 0.72rem; font-weight: 500;
+      padding: 0.2rem 0.55rem; border-radius: 999px;
+      background: rgba(255,255,255,0.07); color: #94a3b8;
+    }
+    .demo-card-arrow {
+      width: 32px; height: 32px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+    .demo-card:hover .demo-card-arrow { transform: translateX(4px); }
+
+    /* CTA BOTTOM */
+    .cta-bottom {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+      border-radius: 20px; padding: clamp(2rem, 5vw, 4rem);
+      text-align: center; position: relative; overflow: hidden;
+      margin: 3rem 0;
+    }
+    .cta-bottom::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% -10%, rgba(255,255,255,0.12) 0%, transparent 60%);
+    }
+    .cta-bottom-inner { position: relative; z-index: 1; }
+    .cta-bottom h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; color: #fff; margin-bottom: 0.75rem; }
+    .cta-bottom p { color: rgba(255,255,255,0.8); margin-bottom: 2rem; font-size: 1.05rem; }
+    .cta-bottom a {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: #fff; color: #1e3a8a;
+      padding: 0.9rem 2rem; border-radius: 8px;
+      text-decoration: none; font-weight: 700; font-size: 1rem;
+      transition: filter 0.2s, transform 0.2s;
+    }
+    .cta-bottom a:hover { filter: brightness(0.96); transform: translateY(-1px); }
+
+    /* FOOTER */
+    .footer {
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 2rem clamp(1rem, 4vw, 2rem);
+      text-align: center; color: #475569; font-size: 0.85rem;
+    }
+    .footer a { color: #3b82f6; text-decoration: none; }
+
+    /* DEMO BAR */
+    .demo-bar {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      z-index: 9999;
+      background: rgba(15,23,42,0.95);
+      backdrop-filter: blur(8px);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 0.65rem 1rem; text-align: center;
+    }
+    .demo-bar a {
+      color: #fff; text-decoration: none;
+      font-size: 0.875rem; font-weight: 600;
+      display: inline-flex; align-items: center; gap: 0.6rem;
+    }
+    .demo-bar a:hover { text-decoration: underline; }
+    .demo-bar a::after { content: '→'; }
+    .demo-bar .hi { color: #3b82f6; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" role="banner">
+  <div class="nav-inner">
+    <a href="https://rondo.rs" class="nav-logo" target="_blank" rel="noopener">rondo<span>.rs</span></a>
+    <span class="nav-badge">Demo showcase · 10 delatnosti</span>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" aria-label="Uvod">
+  <div class="hero-label">Gotovi šabloni za srpske firme</div>
+  <h1>Vaš sajt izgleda<br><em>ovako</em> — za 200€</h1>
+  <p>10 realnih demo landing stranica — svaka dizajnirana za drugu delatnost, sa srpskim sadržajem, mobilnim menijem i CTA dugmadima. Odaberite industriju i pogledajte demo.</p>
+  <a href="https://rondo.rs/sr/usluge/novo" class="hero-cta" target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 0111.19 19 19.5 19.5 0 013.07 10.8 19.79 19.79 0 010 2.19 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    Naručite vaš sajt
+  </a>
+  <div class="hero-stats">
+    <div class="hero-stat"><strong>10</strong><span>gotovih demoa</span></div>
+    <div class="hero-stat"><strong>200€</strong><span>cena izrade</span></div>
+    <div class="hero-stat"><strong>7–14</strong><span>dana isporuke</span></div>
+    <div class="hero-stat"><strong>0</strong><span>skrivenih troškova</span></div>
+  </div>
+</section>
+
+<!-- DEMOS -->
+<main>
+  <section class="section" aria-labelledby="demos-h2">
+    <div class="container">
+      <div class="section-title">
+        <h2 id="demos-h2">Izaberite delatnost</h2>
+        <p>Kliknite na karticu da vidite demo u punom obliku</p>
+      </div>
+      <div class="demos-grid">
+
+        <!-- 1. MEDICINSKA -->
+        <a href="medicinska/" class="demo-card" aria-label="Demo: Medicinska ordinacija">
+          <div class="demo-card-accent" style="background:#0ea5e9;"></div>
+          <div class="demo-card-body">
+            <div class="demo-card-icon" style="background:rgba(14,165,233,0.15);">🏥</div>
+            <div class="demo-card-sub" style="color:#0ea5e9;">Medicinska ordinacija</div>
+            <h3>Ordinacija Plus</h3>
+            <p>Hero sa gradijentom, tim lekara, sekcija za zakazivanje. Miran, poverenjem inspirisan dizajn.</p>
+            <div class="demo-card-footer">
+              <div class="demo-card-sections">
+                <span class="chip">Usluge</span>
+                <span class="chip">Tim</span>
+                <span class="chip">Zakazivanje</span>
+                <span class="chip">Kontakt</span>
+              </div>
+              <div class="demo-card-arrow" style="background:rgba(14,165,233,0.15);color:#0ea5e9;">→</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- 2. STOMATOLOSKA -->
+        <a href="stomatoloska/" class="demo-card" aria-label="Demo: Stomatološka ordinacija">
+          <div class="demo-card-accent" style="background:#06b6d4;"></div>
+          <div class="demo-card-body">
+            <div class="demo-card-icon" style="background:rgba(6,182,212,0.15);">🦷</div>
+            <div class="demo-card-sub" style="color:#06b6d4;">Stomatološka ordinacija</div>
+            <h3>Dental Studio</h3>
+            <p>Photo hero, galerija radova, transparentan cenovnik sa 3 paketa. Svež klinički dizajn.</p>
+            <div class="demo-card-footer">
+              <div class="demo-card-sections">
+                <span class="chip">Galerija</span>
+                <span class="chip">Cenovnik</span>
+                <span class="chip">Usluge</span>
+              </div>
+              <div class="demo-card-arrow" style="background:rgba(6,182,212,0.15);color:#06b6d4;">→</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- 3. AUTO-DELOVI -->
+        <a href="auto-delovi/" class="demo-card" aria-label="Demo: Prodavnica auto delova">
+          <div class="demo-card-accent" style="background:#f59e0b;"></div>
+          <div class="demo-card-body">
+            <div class="demo-card-icon" style="background:rgba(245,158,11,0.15);">⚙️</div>
+            <div class="demo-card-sub" style="color:#f59e0b;">Prodavnica auto delova</div>
+            <h3>AutoParts Centar</h3>
+            <p>Tamna industrijska tema, pretraga po marki/modelu, kategorije delova i forma za upit.</p>
+            <div class="demo-card-footer">
+              <div class="demo-card-sections">
+                <span class="chip">Pretraga</span>
+                <span class="chip">Kategorije</span>
+                <span class="chip">Upit</span>
+              </div>
+              <div class="demo-card-arrow" style="background:rgba(245,158,11,0.15);color:#f59e0b;">→</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- 4. SALON -->
+        <a href="salon/" class="demo-card" aria-label="Demo: Frizerski salon i beauty studio">
+          <div class="demo-card-accent" style="background:#e11d48;"></div>
+          <div class="demo-card-body">
+            <div class="demo-card-icon" style="background:rgba(225,29,72,0.15);">✂️</div>
+            <div class="demo-card-sub" style="color:#e11d48;">Beauty salon</div>
+            <h3>Studio Bella</h3>
+            <p>Split hero sa slikom, detaljan cenovnik, galerija radova i Viber CTA za zakazivanje.</p>
+            <div class="demo-card-footer">
+              <div class="demo-card-sections">
+                <span class="chip">Cenovnik</span>
+                <span class="chip">Galerija</span>
+                <span class="chip">Viber</span>
+              </div>
+              <div class="demo-card-arrow" style="background:rgba(225,29,72,0.15);color:#e11d48;">→</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- 5. RESTORAN -->
+        <a href="restoran/" class="demo-card" aria-label="Demo: Restoran">
+          <div class="demo-card-accent" style="background:#c2410c;"></div>
+          <div class="demo-card-body">
+            <div class="demo-card-icon" style="background:rgba(194,65,12,0.15);">🍽️</div>
+            <div class="demo-card-sub" style="color:#c2410c;">Restoran</div>
+            <h3>Restoran Raskrsnica</h3>
+            <p>Topao foto hero, kompletan meni sa cenama, galerija ambijenta i online rezervacija stola.</p>
+            <div class="demo-card-footer">
+              <div class="demo-card-sections">
+                <span class="chip">Meni</span>
+                <span class="chip">Galerija</span>
+                <span class="chip">Rezervacija</span>
+              </div>
+              <div class="demo-card-arrow" style="background:rgba(194,65,12,0.15);color:#c2410c;">→</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- 6. ADVOKAT -->
+        <a href="advokat/" class="demo-card" aria-label="Demo: Advokatska kancelarija">
+          <div class="demo-card-accent" style="background:#1e3a8a;"></div>
+          <div class="demo-card-body">
+            <div class="demo-card-icon" style="background:rgba(30,58,138,0.2);">⚖️</div>
+            <div class="demo-card-sub" style="color:#60a5fa;">Advokatska kancelarija</div>
+            <h3>AK Đorđević</h3>
+            <p>Tamni autoritetni hero sa serif pismom, 6 oblasti prava, tim advokata i konsultacija CTA.</p>
+            <div class="demo-card-footer">
+              <div class="demo-card-sections">
+                <span class="chip">Oblast prava</span>
+                <span class="chip">Tim</span>
+                <span class="chip">Konsultacija</span>
+              </div>
+              <div class="demo-card-arrow" style="background:rgba(30,58,138,0.25);color:#60a5fa;">→</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- 7. GRADJEVINA -->
+        <a href="gradjevina/" class="demo-card" aria-label="Demo: Građevinska firma">
+          <div class="demo-card-accent" style="background:#eab308;"></div>
+          <div class="demo-card-body">
+            <div class="demo-card-icon" style="background:rgba(234,179,8,0.15);">🏗️</div>
+            <div class="demo-card-sub" style="color:#eab308;">Građevinska firma</div>
+            <h3>Gradnja Pro</h3>
+            <p>Snažan tamni hero sa SVG ilustracijom, reference u brojevima, usluge i forma za brzi upit.</p>
+            <div class="demo-card-footer">
+              <div class="demo-card-sections">
+                <span class="chip">Reference</span>
+                <span class="chip">Usluge</span>
+                <span class="chip">Brzi upit</span>
+              </div>
+              <div class="demo-card-arrow" style="background:rgba(234,179,8,0.15);color:#eab308;">→</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- 8. FITNES -->
+        <a href="fitnes/" class="demo-card" aria-label="Demo: Fitnes centar">
+          <div class="demo-card-accent" style="background:#84cc16;"></div>
+          <div class="demo-card-body">
+            <div class="demo-card-icon" style="background:rgba(132,204,22,0.15);">💪</div>
+            <div class="demo-card-sub" style="color:#84cc16;">Fitnes centar</div>
+            <h3>FitZona</h3>
+            <p>Energičan zeleni hero, 3 planove članarine, nedeljni raspored časova i probni trening CTA.</p>
+            <div class="demo-card-footer">
+              <div class="demo-card-sections">
+                <span class="chip">Članarine</span>
+                <span class="chip">Raspored</span>
+                <span class="chip">Probni trening</span>
+              </div>
+              <div class="demo-card-arrow" style="background:rgba(132,204,22,0.15);color:#84cc16;">→</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- 9. NEKRETNINE -->
+        <a href="nekretnine/" class="demo-card" aria-label="Demo: Agencija za nekretnine">
+          <div class="demo-card-accent" style="background:#059669;"></div>
+          <div class="demo-card-body">
+            <div class="demo-card-icon" style="background:rgba(5,150,105,0.15);">🏠</div>
+            <div class="demo-card-sub" style="color:#059669;">Agencija za nekretnine</div>
+            <h3>ProNekretnine</h3>
+            <p>Premium full-width hero sa search barom, 6 property kartica, agent profil i usluge agencije.</p>
+            <div class="demo-card-footer">
+              <div class="demo-card-sections">
+                <span class="chip">Oglasi</span>
+                <span class="chip">Pretraga</span>
+                <span class="chip">Agent</span>
+              </div>
+              <div class="demo-card-arrow" style="background:rgba(5,150,105,0.15);color:#059669;">→</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- 10. AUTOSERVIS -->
+        <a href="autoservis/" class="demo-card" aria-label="Demo: Autoservis">
+          <div class="demo-card-accent" style="background:#dc2626;"></div>
+          <div class="demo-card-body">
+            <div class="demo-card-icon" style="background:rgba(220,38,38,0.15);">🔧</div>
+            <div class="demo-card-sub" style="color:#dc2626;">Autoservis</div>
+            <h3>Auto Servis Speed</h3>
+            <p>Tamni mehanički split hero sa SVG autom, 6 usluga, detaljni cenovnik i zakazivanje servisa.</p>
+            <div class="demo-card-footer">
+              <div class="demo-card-sections">
+                <span class="chip">Usluge</span>
+                <span class="chip">Cenovnik</span>
+                <span class="chip">Zakazivanje</span>
+              </div>
+              <div class="demo-card-arrow" style="background:rgba(220,38,38,0.15);color:#dc2626;">→</div>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-bottom">
+        <div class="cta-bottom-inner">
+          <h2>Sviđa vam se neki od demoa?</h2>
+          <p>Prilagodimo ga vašem imenu, sadržaju i logou — sajt je spreman za 7–14 dana. Cena: 200€.</p>
+          <a href="https://rondo.rs/sr/usluge/novo" target="_blank" rel="noopener">
+            Poručite vaš sajt na rondo.rs
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div>
+    Demo sajtovi izrađeni za showroom prezentaciju ·
+    <a href="https://rondo.rs" target="_blank" rel="noopener">rondo.rs</a>
+    · mr.paki@gmail.com
+  </div>
+</footer>
+
+<!-- DEMO BAR -->
+<div class="demo-bar" role="complementary" aria-label="Demo informacija">
+  <a href="https://rondo.rs/sr/usluge/novo" target="_blank" rel="noopener">
+    Demo dizajn — vaš sajt za <span class="hi">200€</span> · rondo.rs
+  </a>
+</div>
+
+</body>
+</html>

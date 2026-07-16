@@ -1,0 +1,17 @@
+/* AUTOSERVIS — accent: red #dc2626, hero: dark split mechanical */
+:root {
+  --accent: #dc2626;
+  --accent-darker: #b91c1c;
+}
+
+/* Dark nav */
+.nav {
+  background: rgba(15,23,42,0.96);
+  border-bottom-color: #334155;
+}
+.nav-logo { color: #f1f5f9; }
+.nav-links a { color: #94a3b8; }
+.nav-toggle { color: #f1f5f9; }
+
+/* Red on dark hero works best as bright accent */
+.hero-split-dark .hero-split-visual { background: #1a0a0a; }

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ordinacija Plus — Demo dizajn | rondo.rs</title>
+  <meta name="description" content="Demo sajt za medicinsku ordinaciju. Primarna zdravstvena zaštita, laboratorija i preventivni pregledi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" role="banner">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">Ordinacija<span>Plus</span></a>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="#usluge">Usluge</a></li>
+      <li><a href="#tim">Tim</a></li>
+      <li><a href="#zasto-mi">Zašto mi</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+      <li><a href="#zakazivanje" class="nav-cta">Zakaži pregled</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Otvori meni" aria-expanded="false" aria-controls="nav-links">
+      <span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO: centered gradient -->
+<section class="hero-centered" aria-label="Naslovna">
+  <div class="hero-centered-content">
+    <span class="section-label">Primarna zdravstvena zaštita</span>
+    <h1>Vaše zdravlje je<br>naša briga</h1>
+    <p class="lead">Opšta medicina, laboratorija i preventivni pregledi pod jednim krovom. Zakazivanje bez čekanja, sa iskusnim timom lekara.</p>
+    <div class="hero-btns">
+      <a href="#zakazivanje" class="btn btn-white btn-lg">Zakaži pregled</a>
+      <a href="#usluge" class="btn btn-ghost btn-lg">Naše usluge</a>
+    </div>
+    <div class="hero-badges">
+      <div class="hero-badge"><strong>15+</strong><span>godina iskustva</span></div>
+      <div class="hero-badge"><strong>4.800+</strong><span>zadovoljnih pacijenata</span></div>
+      <div class="hero-badge"><strong>Pon–Sub</strong><span>08:00–20:00</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- USLUGE -->
+<section class="section" id="usluge" aria-labelledby="usluge-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="section-label">Šta nudimo</span>
+      <h2 id="usluge-h2">Medicinske usluge</h2>
+      <p>Kompletan spektar primarne zdravstvene zaštite prilagođen svim uzrastima.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 6v8m-4-4h8"/></svg>
+        </div>
+        <h3>Opšta medicina</h3>
+        <p>Pregled, dijagnoza i lečenje akutnih i hroničnih bolesti za sve uzraste.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+        </div>
+        <h3>Laboratorija</h3>
+        <p>Kompletan krvni nalaz, biohemija, hormoni i mikrobiološke analize. Rezultati istog dana.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <h3>Preventivni pregledi</h3>
+        <p>Sistematski i ciljani pregledi za rano otkrivanje bolesti i procenu zdravstvenog stanja.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        </div>
+        <h3>Kućne posete</h3>
+        <p>Dolazak lekara na vašu adresu za pacijente koji nisu u mogućnosti da dođu u ordinaciju.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+        </div>
+        <h3>EKG i ultrazvuk</h3>
+        <p>Dijagnostika srca i unutrašnjih organa sa modernom opremom na licu mesta.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/></svg>
+        </div>
+        <h3>Konsultacije i uputi</h3>
+        <p>Upućivanje i koordinacija sa specijalističkim ambulantama i bolnicama.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIM -->
+<section class="section section--alt" id="tim" aria-labelledby="tim-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="section-label">Naš tim</span>
+      <h2 id="tim-h2">Iskusni lekari na vašoj strani</h2>
+      <p>Stručni tim sa dugogodišnjim iskustvom u primarnoj zdravstvenoj zaštiti.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <!-- zameni pravom fotografijom -->
+        <div class="team-avatar"><img src="https://picsum.photos/seed/medteam1/240/240" alt="Dr. Marina Nikolić" loading="lazy"></div>
+        <h3>Dr. Marina Nikolić</h3>
+        <span class="team-role">Spec. interne medicine</span>
+        <p>Dvadeset godina iskustva u dijagnostici i lečenju internističkih oboljenja.</p>
+      </div>
+      <div class="team-card reveal">
+        <!-- zameni pravom fotografijom -->
+        <div class="team-avatar"><img src="https://picsum.photos/seed/medteam2/240/240" alt="Dr. Stefan Petrović" loading="lazy"></div>
+        <h3>Dr. Stefan Petrović</h3>
+        <span class="team-role">Spec. porodične medicine</span>
+        <p>Posvećen holističkom pristupu zdravlju pacijenta i porodičnoj medicina.</p>
+      </div>
+      <div class="team-card reveal">
+        <!-- zameni pravom fotografijom -->
+        <div class="team-avatar"><img src="https://picsum.photos/seed/medteam3/240/240" alt="Ms. Jovana Đorđević" loading="lazy"></div>
+        <h3>Jovana Đorđević</h3>
+        <span class="team-role">Medicinska sestra</span>
+        <p>Stručna medicinska sestra sa specijalizacijom u laboratorijskoj dijagnostici.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ZASTO MI -->
+<section class="section" id="zasto-mi" aria-labelledby="zasto-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="section-label">Naše prednosti</span>
+      <h2 id="zasto-h2">Zašto izabrati nas?</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal">
+        <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+        <div class="why-num">24h</div>
+        <h3>Brzo zakazivanje</h3>
+        <p>Pregled zakazujete istog dana, telefonom ili online, bez dugog čekanja.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg></div>
+        <div class="why-num">ISO</div>
+        <h3>Akreditovana ordinacija</h3>
+        <p>Radimo po akreditovanim protokolima sa sertifikovanom opremom.</p>
+      </div>
+      <div class="why-icon-item why-item reveal">
+        <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+        <div class="why-num">3</div>
+        <h3>Specijalizovani lekari</h3>
+        <p>Tim sa specijalizacijom, bez generičkog pristupa svakom pacijentu.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
+        <div class="why-num">E-</div>
+        <h3>Elektronski karton</h3>
+        <p>Kompletna medicinska istorija pacijenta digitalizovana i sigurno pohranjena.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ZAKAZIVANJE CTA -->
+<section class="cta-section" id="zakazivanje" aria-labelledby="cta-h2">
+  <div class="cta-section-inner">
+    <span class="section-label" style="background:rgba(255,255,255,0.2);color:#fff;">Zakaži odmah</span>
+    <h2 id="cta-h2">Briga o zdravlju počinje danas</h2>
+    <p>Dostupni smo ponedeljkom do subote od 08:00 do 20:00 h.<br>Zakaži pregled telefonom, Viber-om ili popuni obrazac.</p>
+    <div class="hero-btns">
+      <a href="tel:+38163XXXXXXX" class="btn btn-white btn-lg">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.0 2.19 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Pozovi nas
+      </a>
+      <a href="viber://chat?number=%2B38163XXXXXXX" class="btn btn-ghost btn-lg">Viber poruka</a>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="section section--alt" id="kontakt" aria-labelledby="kontakt-h2">
+  <div class="container">
+    <div class="section-title reveal">
+      <h2 id="kontakt-h2">Kontaktirajte nas</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+          <div class="contact-item-text">
+            <strong>Adresa</strong>
+            <span>Ulica Zdravlja 14, Beograd</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 010 2.19 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div class="contact-item-text">
+            <strong>Telefon / Viber</strong>
+            <a href="tel:+38163XXXXXXX">+381 63 XXX XX XX</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+          <div class="contact-item-text">
+            <strong>Imejl</strong>
+            <a href="mailto:info@ordinacijaplus.rs">info@ordinacijaplus.rs</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+          <div class="contact-item-text">
+            <strong>Radno vreme</strong>
+            <span>Pon–Pet 08:00–20:00 · Sub 09:00–14:00</span>
+          </div>
+        </div>
+        <div class="contact-btns">
+          <a href="tel:+38163XXXXXXX" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 0111.19 19 19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.0 2.19 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            Pozovi
+          </a>
+          <a href="viber://chat?number=%2B38163XXXXXXX" class="btn btn-viber">Viber</a>
+          <a href="mailto:info@ordinacijaplus.rs" class="btn btn-outline">Imejl</a>
+        </div>
+      </div>
+      <!-- zameni pravom Google Maps embed-om -->
+      <div class="map-placeholder reveal" role="img" aria-label="Mapa lokacije">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <span>Mapa lokacije<br><small>zameni Google Maps embed-om</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="footer-logo">Ordinacija<span>Plus</span></a>
+        <p>Primarna zdravstvena zaštita sa pažnjom i stručnošću. Vaše zdravlje je naš prioritet.</p>
+      </div>
+      <nav aria-label="Footer navigacija usluge">
+        <h4>Usluge</h4>
+        <ul>
+          <li><a href="#usluge">Opšta medicina</a></li>
+          <li><a href="#usluge">Laboratorija</a></li>
+          <li><a href="#usluge">Preventiva</a></li>
+          <li><a href="#usluge">Kućne posete</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Footer navigacija info">
+        <h4>Informacije</h4>
+        <ul>
+          <li><a href="#tim">Naš tim</a></li>
+          <li><a href="#zakazivanje">Zakazivanje</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Ordinacija Plus · Ulica Zdravlja 14, Beograd</span>
+      <a href="https://rondo.rs/sr/usluge/novo" target="_blank" rel="noopener">Sajt izradio rondo.rs</a>
+    </div>
+  </div>
+</footer>
+
+<!-- DEMO BAR -->
+<div class="demo-bar" role="complementary" aria-label="Demo informacija">
+  <a href="https://rondo.rs/sr/usluge/novo" target="_blank" rel="noopener">
+    Demo dizajn — vaš sajt za <span class="demo-bar-hi">200€</span> · rondo.rs
+  </a>
+</div>
+
+<script src="../assets/base.js" defer></script>
+</body>
+</html>
