@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rondo.rs Demo Sajtovi — Šabloni po delatnosti</title>
-  <meta name="description" content="12 gotovih demo landing stranica po delatnosti. Pogledajte kako može izgledati vaš sajt — medicinska, stomatološka, salon, restoran, advokat, gradjevina, fitnes, nekretnine, autoservis i auto delovi.">
+  <title>Izrada sajta po delatnosti — demo primeri od 200€ | Rondo</title>
+  <meta name="description" content="Pogledajte 12 gotovih demo sajtova po delatnosti — ordinacije, saloni, restorani, advokati i još. Vaš sajt za 7 dana, već od 200€. Izaberite dizajn.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -214,6 +214,58 @@
     .demo-bar a:hover { text-decoration: underline; }
     .demo-bar a::after { content: '→'; }
     .demo-bar .hi { color: #3b82f6; }
+
+    /* INTRO */
+    .intro {
+      padding: clamp(2.5rem, 6vw, 4rem) clamp(1rem, 4vw, 2rem);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .intro-inner {
+      max-width: 760px; margin: 0 auto;
+      text-align: center;
+    }
+    .intro-inner p {
+      font-size: clamp(0.98rem, 1.8vw, 1.1rem);
+      color: #94a3b8; line-height: 1.8;
+    }
+
+    /* FAQ */
+    .faq { padding: clamp(3rem, 8vw, 5rem) 0; }
+    .faq-title {
+      text-align: center; margin-bottom: 2.5rem;
+    }
+    .faq-title h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800; color: #f8fafc; margin-bottom: 0.5rem;
+    }
+    .faq-title p { color: #64748b; font-size: 1rem; }
+    .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.75rem; }
+    details.faq-item {
+      background: #1e293b;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px; overflow: hidden;
+    }
+    details.faq-item[open] { border-color: rgba(59,130,246,0.3); }
+    details.faq-item summary {
+      list-style: none; cursor: pointer;
+      padding: 1.15rem 1.5rem;
+      font-weight: 600; font-size: 0.98rem; color: #f1f5f9;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      user-select: none;
+    }
+    details.faq-item summary::-webkit-details-marker { display: none; }
+    details.faq-item summary::after {
+      content: '+'; font-size: 1.4rem; font-weight: 300;
+      color: #3b82f6; flex-shrink: 0; line-height: 1;
+      transition: transform 0.2s;
+    }
+    details.faq-item[open] summary::after { content: '−'; }
+    details.faq-item .faq-answer {
+      padding: 0 1.5rem 1.25rem;
+      font-size: 0.92rem; color: #94a3b8; line-height: 1.75;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 1rem;
+    }
   </style>
 </head>
 <body>
@@ -240,6 +292,13 @@
     <div class="hero-stat"><strong>200€</strong><span>cena izrade</span></div>
     <div class="hero-stat"><strong>7–14</strong><span>dana isporuke</span></div>
     <div class="hero-stat"><strong>0</strong><span>skrivenih troškova</span></div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro" aria-label="Uvod">
+  <div class="intro-inner">
+    <p>Tražite izradu sajta za svoju delatnost, ali ne znate kako bi izgledao? Umesto praznih obećanja, pripremili smo 12 živih demo sajtova — po jedan za svaku struku, od medicinske ordinacije i salona do restorana, advokatske kancelarije i pet shopa. Svaki je pravi, mobilan sajt koji možete odmah da otvorite i pogledate. Izaberete onaj koji vam odgovara, a mi ga za 7 dana prilagodimo vašem imenu, tekstu i slikama. Cena je fiksna i jasna — 200€ za izradu, bez skrivenih troškova.</p>
   </div>
 </section>
 
@@ -497,6 +556,49 @@
           </a>
         </div>
       </div>
+
+    </div>
+
+      <!-- FAQ -->
+      <section class="faq" aria-labelledby="faq-h2">
+        <div class="faq-title">
+          <h2 id="faq-h2">Često postavljana pitanja</h2>
+          <p>Sve što treba da znate pre nego što se odlučite</p>
+        </div>
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary>Koliko košta izrada sajta?</summary>
+            <div class="faq-answer">Izrada landing sajta po jednom od demo dizajna košta 200€ jednokratno. Ako želite redovno održavanje — ažuriranja, bekap i sigurnost — dodajemo 25€ mesečno. Cena je fiksna i unapred poznata, bez naknadnih iznenađenja.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Šta je uključeno u cenu?</summary>
+            <div class="faq-answer">Prilagođavanje izabranog dizajna vašem brendu, vaš tekst i slike, mobilna verzija, osnovni SEO, kontakt forma i dugmad za poziv/Viber/WhatsApp. Domen i hosting se plaćaju posebno, ali vam pomažemo oko postavljanja.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Koliko traje izrada?</summary>
+            <div class="faq-answer">Od 7 do 14 dana od trenutka kada dobijemo vaš sadržaj (tekst, logo, slike). Pošto dizajn već postoji, najveći deo vremena ide na prilagođavanje, ne na crtanje od nule.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Nema moje delatnosti među demoima — mogu li ipak da dobijem sajt?</summary>
+            <div class="faq-answer">Naravno. Demoi su primeri pristupa, a ne jedini izbor. Javite nam čime se bavite i predložićemo najbliži dizajn koji prilagođavamo vašim potrebama.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Da li mogu kasnije da nadograđujem sajt?</summary>
+            <div class="faq-answer">Da. Sajt se pravi tako da se lako proširuje — nove stranice, blog, online prodaja ili zakazivanje mogu da se dodaju kada vam zatreba.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Kako izgleda saradnja?</summary>
+            <div class="faq-answer">Izaberete demo, javite se preko WhatsApp-a ili mejla, pošaljete nam osnovne podatke, i mi vam za 7 dana isporučimo sajt spreman za objavu.</div>
+          </details>
+
+        </div>
+      </section>
 
     </div>
   </section>
